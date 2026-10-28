@@ -1,0 +1,18 @@
+.regulation-category { margin-top: var(--space-8); }
+.regulation-category > h2 { font-size: 20px; margin-bottom: var(--space-4); }
+.regulation-category-empty { font-size: 13px; color: var(--color-muted); padding: 12px 0; border-top: 1px solid var(--color-border); }
+.regulation-card { border-radius: var(--radius-small); background: var(--color-surface); }
+.regulation-card h3 { margin: var(--space-2) 0 0; font-size: 17px; line-height: 1.4; }
+.regulation-card .catalog-materials { margin-top: var(--space-4); }
+.regulation-details { min-width: 0; overflow-wrap: anywhere; padding: var(--space-6); margin-top: var(--space-6); border: 1px solid var(--color-beige); border-radius: var(--radius-card); background: var(--color-card); }
+.regulation-details h2 { font-size: 24px; }
+.regulation-details h3 { font-size: 16px; margin: var(--space-6) 0 var(--space-2); }
+.regulation-details dl { font-size: 14px; }
+.regulation-details dt { font-weight: 600; margin-top: var(--space-4); }
+.regulation-details dd { margin: 4px 0 0; color: var(--color-muted); }
+.regulation-relations { margin: 0; padding-left: 20px; font-size: 14px; }
+.regulation-relations li + li { margin-top: 6px; }
+.regulation-region-empty { margin-top: var(--space-6); padding: var(--space-4); border: 1px solid var(--color-border); }
+@media (max-width: 600px) { .regulation-details { padding: var(--space-4); } .regulation-details h2 { font-size: 20px; } .regulation-details .stage-details-heading { flex-direction: column; } }
+.regulation-category--empty { margin-top: var(--space-4); border-top: 1px solid var(--color-border); padding-top: var(--space-3); }
+.regulation-category--empty summary { color: var(--color-muted); cursor: pointer; font-size: 14px; }

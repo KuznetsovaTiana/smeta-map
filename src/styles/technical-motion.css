@@ -1,0 +1,26 @@
+:root { --bg-main: #e9e7e2; }
+body {
+  background-color: var(--bg-main);
+  background-image: linear-gradient(#20222008 1px, transparent 1px), linear-gradient(90deg, #20222008 1px, transparent 1px);
+  background-size: 28px 28px;
+  animation: drafting-grid 28s linear infinite;
+}
+.app-layout { position: relative; isolation: isolate; }
+.app-layout::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url('../assets/technical-background.svg') center top / 1440px 1000px repeat-y,
+    radial-gradient(ellipse at 90% 12%, #a65f360c, transparent 38%),
+    radial-gradient(ellipse at 4% 45%, #626b550b, transparent 38%);
+}
+.schema-hero-drawing { height: auto; transition: transform .6s ease-out; }
+@keyframes drafting-grid { to { background-position: 28px 28px, 28px 28px; } }
+@media (max-width: 767px) {
+  .app-layout::before { display: none; }
+  .schema-hero-drawing { transform: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body, .stage-card--selected, #stage-card-estimate-development.stage-card--selected,
+  .process-map-step > .process-map-connector path { animation: none !important; }
+  .schema-hero-drawing { transform: none !important; transition: none; }
+  .stage-card { transition: none; }
+}

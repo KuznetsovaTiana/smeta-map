@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" fill="none">
+  <defs><marker id="dimension" orient="auto-start-reverse" markerWidth="7" markerHeight="7" refX="6" refY="3"><path d="M6 3 0 0v6Z" fill="#8A7561"/></marker></defs>
+  <g stroke="#202220" stroke-width="1" opacity=".035">
+    <path d="M850 100h410v240H850zM870 120h170v200H870zM1060 120h180v90h-180zM1060 230h180v90h-180zM940 120v70m0 40v90M870 210h60m40 0h70"/>
+    <path d="M110 650h270v180H110zM110 680h270m-270 30h270m-270 30h270m-270 30h270m-270 30h270M170 650v180m90-180v180m60-180v180"/>
+    <circle cx="1200" cy="750" r="100"/><circle cx="1200" cy="750" r="65"/><path d="m1140 690 120 120m-120 0 120-120M550 420l150-85 150 85v170l-150 85-150-85zM550 420l150 85 150-85M700 505v170"/>
+  </g>
+  <g stroke="#626B55" stroke-width="1" stroke-dasharray="16 8 3 8" opacity=".045"><path d="M800 220h510M950 60v320M1050 750h300M1200 600v300M50 920h720"/></g>
+  <g stroke="#8A7561" opacity=".05"><path d="M850 355v35m410-35v35M840 100h-40m40 240h-40M110 845v40m270-40v40"/><path d="M855 378h400M815 106v228M115 873h260" marker-start="url(#dimension)" marker-end="url(#dimension)"/></g>
+</svg>
