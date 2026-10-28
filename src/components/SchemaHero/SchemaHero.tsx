@@ -26,9 +26,7 @@ export function SchemaHero() {
   }, [])
   return <div ref={heroRef} className="schema-hero">
     <div className="schema-hero-copy">
-      <p className="eyebrow"><span className="hero-index">01</span> Процесс / Сметное дело</p>
       <h1>Работа сметчика<br />в строительном проекте</h1>
-      <p className="schema-hero-description">От предварительной оценки стоимости до окончательных расчётов</p>
     </div>
     <img ref={drawingRef} className="schema-hero-drawing" src={estimateHero} width="440" height="240" alt="" aria-hidden="true" />
   </div>
