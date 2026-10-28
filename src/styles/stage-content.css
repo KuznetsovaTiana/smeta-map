@@ -1,4 +1,5 @@
 .process-map-track { grid-auto-rows: 224px; }
+.stage-details { scroll-margin-top: 80px; }
 .stage-card { gap: 8px; }
 .stage-card-trigger { position: absolute; inset: 0; border: 0; border-radius: inherit; background: transparent; color: inherit; cursor: pointer; }
 .stage-card-trigger:focus-visible { outline: 2px solid var(--terracotta-light); outline-offset: 4px; }

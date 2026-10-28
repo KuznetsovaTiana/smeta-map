@@ -1,0 +1,49 @@
+.schema-hero-tagline { display: none; }
+@property --process-progress { syntax: '<percentage>'; inherits: true; initial-value: 0%; }
+@media (min-width: 1280px) {
+  .app-layout:has(.schema-page) { height: auto; min-height: 100dvh; }
+  .app-layout:has(.schema-page) .main-content { flex: 1 0 auto; display: block; padding-top: 8px; padding-bottom: 24px; }
+  .schema-page { display: block; }
+  .schema-page .schema-hero { min-height: 0; padding-block: 8px 14px; gap: 20px; }
+  .schema-page .schema-hero-drawing { max-height: clamp(100px, 14dvh, 150px); }
+  .schema-page .schema-hero h1 { font-size: clamp(34px, 3vw, 44px); }
+  .schema-hero-tagline { display: block; margin-top: 10px; color: var(--text-muted); font-size: 14px; line-height: 1.5; }
+  .schema-page .process-map { flex: none; min-height: 0; height: auto; margin-top: 12px; }
+  .schema-page .process-map-toolbar { padding: 8px 16px; background: color-mix(in srgb, var(--surface-muted) 40%, var(--surface)); }
+  .process-map-count { font-size: 10px; letter-spacing: 1.3px; }
+  .schema-page .process-map-hint { padding-top: 8px; }
+  .process-map .process-map-track {
+    position: relative; grid-auto-rows: 140px; padding: 18px 12px 40px;
+    background-image: radial-gradient(circle, #2022200b .8px, transparent 1px), linear-gradient(90deg, #20222005 1px, transparent 1px);
+    background-size: 20px 20px, 100px 100%;
+    transition: grid-template-columns var(--motion-reveal) var(--ease-out), --process-progress var(--motion-reveal) var(--ease-out);
+  }
+  .process-map .process-map-track--focused { grid-auto-rows: 220px; }
+  .process-map-track::before {
+    content: ''; position: absolute; left: 12px; right: 12px; bottom: 20px; height: 1px; pointer-events: none;
+    background: linear-gradient(to right, var(--accent) 0 var(--process-progress), var(--beige-dark) var(--process-progress) 100%);
+  }
+  .process-map-row > .process-map-step { align-items: flex-end; }
+  .process-map-step::before { content: ''; position: absolute; left: 50%; bottom: -20px; height: 20px; width: 1px; background: var(--beige-dark); opacity: .6; pointer-events: none; }
+  .process-map-step::after { content: ''; position: absolute; left: 50%; bottom: -23px; width: 7px; height: 7px; border-radius: 50%; background: var(--surface); border: 1px solid var(--beige-dark); transform: translateX(-50%); pointer-events: none; }
+  .process-map-step[data-reached='true']::before, .process-map-step[data-reached='true']::after { background-color: var(--accent); border-color: var(--accent); }
+  .process-map-step:has(.stage-card--selected)::after { width: 11px; height: 11px; bottom: -25px; box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent); }
+  .process-map-track .process-map-connector { display: none; }
+  .process-map .stage-card:not(.stage-card--selected) { height: 140px; gap: 10px; background-color: color-mix(in srgb, var(--surface) 90%, var(--surface-muted)); }
+  .process-map .stage-card:not(.stage-card--selected) .stage-card-number { font-size: 30px; color: var(--graphite); }
+  .process-map .stage-card:not(.stage-card--selected) .stage-card-title { font-size: 12px; font-weight: 600; }
+  .process-map .stage-card:not(.stage-card--selected) .stage-card-icon { margin-top: auto; opacity: .8; }
+  #stage-card-estimate-development:not(.stage-card--selected) { color: var(--graphite); }
+  #stage-card-estimate-development:not(.stage-card--selected) .stage-card-icon { color: var(--accent); }
+  .process-map .stage-card--compact { opacity: .88; }
+  .process-map .stage-card--selected, #stage-card-estimate-development.stage-card--selected {
+    background-color: var(--accent-dark); border-color: var(--accent); outline-color: var(--accent-soft); padding: 14px; gap: 8px;
+    box-shadow: 0 5px 14px #20222018;
+  }
+  .process-map .stage-card--selected .stage-card-number { font-size: 32px; color: var(--surface); }
+  .process-map .stage-card--selected .stage-card-title { font-size: 16px; line-height: 1.3; }
+  .process-map .stage-card--selected .stage-card-items { margin-top: auto; }
+  .process-map .stage-card--selected .stage-card-support { margin-top: 0; font-size: 11px; line-height: 1.4; max-height: 2.8em; color: var(--surface); opacity: .85; }
+  .process-map .stage-card-more { display: none; }
+  .process-map-track::before, .process-map-step::after { transition: background-color var(--motion-normal) var(--ease-out), border-color var(--motion-normal) var(--ease-out), box-shadow var(--motion-normal) var(--ease-out); }
+}

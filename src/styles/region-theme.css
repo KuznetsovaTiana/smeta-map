@@ -1,0 +1,61 @@
+.app-layout[data-region='moscow'] {
+  --page-bg: #ece7e1; --surface: #f6f1eb;
+  --accent: #a65f36; --accent-soft: #d4a384; --accent-dark: #7d4328;
+  --surface-muted: #ded5ca;
+}
+.app-layout[data-region='regions'] {
+  --page-bg: #e8eae4; --surface: #f3f4ef;
+  --accent: #66705a; --accent-soft: #a8b09a; --accent-dark: #47503e;
+  --surface-muted: #d8ddd1;
+}
+.app-layout[data-region] {
+  --bg-main: var(--page-bg); --color-background: var(--page-bg);
+  --color-surface: var(--surface); --color-card: var(--surface-muted);
+  --terracotta: var(--accent); --terracotta-light: var(--accent-soft); --color-terracotta: var(--accent);
+  background-color: var(--page-bg);
+  background-image: linear-gradient(#20222008 1px, transparent 1px), linear-gradient(90deg, #20222008 1px, transparent 1px);
+  background-size: 28px 28px; animation: drafting-grid 28s linear infinite;
+  --theme-bg-duration: 300ms; --theme-duration: 250ms;
+}
+body { animation: none; }
+.app-layout[data-region]::before {
+  background: radial-gradient(ellipse at 90% 12%, color-mix(in srgb, var(--accent) 5%, transparent), transparent 38%);
+}
+.app-layout::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-color: var(--accent); opacity: .045;
+  mask: url('../assets/region-moscow.svg') right top / 1000px 750px repeat;
+}
+.app-layout[data-region='regions']::after { mask-image: url('../assets/region-regions.svg'); }
+.region-control { display: flex; flex-direction: column; align-items: center; gap: 2px; flex-shrink: 0; }
+.footer-credit { text-transform: none; }
+.region-caption { white-space: nowrap; font-size: 9px; line-height: 12px; color: #d2d3c9; }
+.header .region-switch button[aria-pressed='true'], .header .region-switch button[aria-pressed='true']:hover { background-color: var(--accent); color: #fff; }
+.header .nav-link-active, .header .nav-link:hover { color: var(--accent-soft); }
+.stage-card { background-color: var(--surface); }
+.stage-card-icon { color: var(--accent); }
+#stage-card-estimate-development:not(.stage-card--selected) .stage-card-icon { color: var(--surface); }
+#stage-card-estimate-development { background-color: var(--accent); border-color: var(--accent-dark); }
+.stage-card--selected, #stage-card-estimate-development.stage-card--selected { border-color: var(--accent); outline-color: var(--accent-soft); background-color: var(--graphite); }
+.stage-card--selected .stage-card-number, .stage-card--selected .stage-card-icon { color: var(--accent-soft); }
+.stage-card-items button:hover, .stage-card-items button[aria-pressed='true'] { background-color: color-mix(in srgb, var(--accent) 15%, transparent); }
+.stage-details, .related-documents, .influence-layer { background-color: color-mix(in srgb, var(--surface-muted) 70%, var(--surface)); }
+.details-item, .resource-entry, .catalog-card { background-color: var(--surface); }
+.details-item[aria-pressed='true'], .stage-document-buttons button[aria-pressed='true'], .related-card[aria-pressed='true'] { background-color: color-mix(in srgb, var(--accent-soft) 30%, var(--surface)); box-shadow: inset 3px 0 var(--accent); }
+.document-sidebar { border-top-color: var(--accent); }
+.document-sidebar-heading h3 svg, .details-item[aria-pressed='true'] .details-item-icon, .catalog-type svg { color: var(--accent-soft); }
+.catalog-type svg, .document-materials h4 svg, .item-fields h4 svg { color: var(--accent); }
+.catalog-card:hover { background-color: color-mix(in srgb, var(--accent-soft) 12%, var(--surface)); border-color: var(--accent); }
+.document-sidebar-heading .details-close:hover { background-color: var(--accent-dark); }
+.app-layout, .app-layout::before, .app-layout::after,
+.app-layout :is(.header, .region-switch button, .nav-link, .process-map, .stage-card, .stage-card-icon, .stage-card-number, .details-item, .stage-details, .document-sidebar, .catalog-card, .resource-entry, .related-card, .influence-pill, .influence-layer, .related-documents, .details-close, .catalog-reset) {
+  transition-property: background-color, border-color, color, box-shadow, transform;
+  transition-duration: var(--theme-bg-duration), var(--theme-duration), var(--theme-duration), var(--theme-duration), var(--motion-hover);
+  transition-timing-function: var(--ease-out);
+}
+.stage-card:active { transition-duration: var(--motion-press); }
+@media (max-width: 767px) { .region-caption, .app-layout::after { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .app-layout[data-region], .app-layout::before, .app-layout::after, .app-layout * { transition: none !important; }
+  .app-layout[data-region] { animation: none; }
+}

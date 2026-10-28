@@ -9,6 +9,7 @@
   --ease-out: cubic-bezier(0, 0, .2, 1);
 }
 .stage-card {
+  --selected-scale: 1.05;
   cursor: pointer;
   transition: transform var(--motion-hover) var(--ease-out), border-color var(--motion-hover) var(--ease-out), box-shadow var(--motion-hover) var(--ease-out), background-color var(--motion-hover) var(--ease-out);
 }
@@ -16,14 +17,16 @@
 .stage-card-number { display: inline-block; transform-origin: left center; transition: transform var(--motion-normal) var(--ease-out); }
 .stage-card::after { content: ''; position: absolute; inset: -1px; border: 1px solid var(--terracotta); border-radius: inherit; pointer-events: none; opacity: 0; }
 .stage-card--selected, #stage-card-estimate-development.stage-card--selected {
-  border-color: var(--terracotta); transform: translateY(-3px); animation: stage-select var(--motion-normal) var(--ease-out);
-  box-shadow: 0 3px 8px #2022200c;
+  z-index: 2;
+  border-color: var(--accent); transform: translateY(-3px) scale(var(--selected-scale)); animation: stage-select var(--motion-slow) var(--ease-out);
+  box-shadow: 0 6px 16px #20222020;
 }
 .stage-card--selected::after { animation: selection-ring var(--motion-slow) var(--ease-out); }
 .stage-card--selected .stage-card-number { transform: scale(1.06); animation: number-select var(--motion-normal) var(--ease-out); }
 .stage-card--selected .stage-card-icon { transform: rotate(4deg) scale(1.04); color: var(--terracotta-light); }
 @media (hover: hover) and (pointer: fine) {
   .stage-card:hover { transform: translateY(-3px); border-color: var(--terracotta); box-shadow: 0 4px 10px #20222012; }
+  .stage-card--selected:hover { transform: translateY(-3px) scale(var(--selected-scale)); box-shadow: 0 6px 16px #20222020; }
   .stage-card:hover .stage-card-icon { transform: translateY(-2px); }
   .stage-card--selected:hover .stage-card-icon { transform: translateY(-2px) rotate(4deg) scale(1.04); }
   :is(.details-item, .stage-document-buttons button, .related-card, .catalog-card):hover { transform: translateY(-2px); border-color: var(--terracotta); }
@@ -46,7 +49,7 @@
 :is(.details-item, .stage-document-buttons button, .related-card, .catalog-card):active { transform: scale(.97); transition-duration: var(--motion-press); }
 .document-sidebar { animation: sidebar-reveal var(--motion-normal) var(--ease-out); }
 .document-sidebar-content { min-width: 0; animation: content-reveal var(--motion-normal) var(--ease-out); }
-@keyframes stage-select { 0% { transform: translateY(-3px) scale(.98); } 45% { transform: translateY(-3px) scale(1.015); } 100% { transform: translateY(-3px) scale(1); } }
+@keyframes stage-select { from { transform: translateY(0) scale(.98); } to { transform: translateY(-3px) scale(var(--selected-scale)); } }
 @keyframes selection-ring { from { opacity: .5; transform: scale(1); } to { opacity: 0; transform: scale(1.045, 1.06); } }
 @keyframes number-select { 0% { transform: scale(1); } 55% { transform: scale(1.12) translateY(-1px); } 100% { transform: scale(1.06); } }
 @keyframes selected-connection { from { stroke-dashoffset: 18; } to { stroke-dashoffset: 0; } }
@@ -55,6 +58,7 @@
 @keyframes sidebar-reveal { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes content-reveal { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 600px) {
+  .stage-card { --selected-scale: 1.02; }
   .stage-details { animation-name: mobile-details-reveal; }
   .document-sidebar { animation-name: content-reveal; }
 }

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240" fill="none" >
+      <style>g[stroke] path{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 3s ease-out forwards}g[stroke="#66705A"] path{animation-duration:3.8s}@keyframes draw{to{stroke-dashoffset:0}}@media(prefers-reduced-motion:reduce){g[stroke] path{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}</style><defs><pattern id="hero-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0v20" stroke="#202220" stroke-width=".5" opacity=".12" /></pattern></defs>
+      <rect x="0" y="0" width="440" height="240" fill="url(#hero-grid)" />
+      <g stroke="#202220" stroke-width="1.2" stroke-linejoin="round">
+        <path d="M35 188h218M55 188V80l70-35 90 39v104M55 80l90 35 70-31M145 115v73M125 45v57M55 116l90 36 70-31M55 151l90 36 70-31" />
+        <path d="M79 93v86M102 103v81M169 105v75M192 94v74" opacity=".5" />
+        <path d="M35 66v122M30 66h10M30 188h10M55 207h160M55 202v10M215 202v10M35 64v-8M55 207h-8" opacity=".4" />
+        <path d="m224 19 12 0m-6-6v12M18 222h12m-6-6v12" opacity=".5" />
+        <path d="M270 38h112l25 25v141H270z" fill="#F3F4EF" />
+        <path d="M382 38v25h25M288 60h67M288 72h48M288 91h102M288 106h102M288 121h102M288 136h102M288 91v45m34-45v45m40-45v45m28-45v45" />
+        <path d="M287 185h104M287 153v32" opacity=".4" />
+      </g>
+      <g stroke="#66705A" stroke-width="2" stroke-linecap="square">
+        <path d="m292 177 23-10 21 4 24-17 25-8M145 115v73M270 204h137" />
+        <path d="M381 146h5v5" />
+      </g>
+      <g fill="#202220" font-family="Consolas, monospace" font-size="8" opacity=".65"><text x="97" y="225">РАЗРЕЗ 01 / 1:100</text><text x="286" y="222">ОБЪЁМ × ЦЕНА</text><text x="16" y="126" transform="rotate(-90 16 126)">+12.000</text></g>
+    </svg>

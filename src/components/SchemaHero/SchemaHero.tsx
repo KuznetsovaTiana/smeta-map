@@ -1,7 +1,11 @@
+import { useSearchParams } from 'react-router-dom'
+import { getRegion } from '../../utils/routing'
+import estimateHeroRegions from '../../assets/estimate-hero-regions.svg'
 import { useEffect, useRef } from 'react'
 import estimateHero from '../../assets/estimate-hero.svg'
 
 export function SchemaHero() {
+  const [params] = useSearchParams()
   const heroRef = useRef<HTMLDivElement>(null)
   const drawingRef = useRef<HTMLImageElement>(null)
   useEffect(() => {
@@ -26,8 +30,9 @@ export function SchemaHero() {
   }, [])
   return <div ref={heroRef} className="schema-hero">
     <div className="schema-hero-copy">
-      <h1>Работа сметчика<br />в строительном проекте</h1>
+      <h1>Сметное дело</h1>
+      <p className="schema-hero-tagline">От предварительной оценки стоимости до закрытия проекта</p>
     </div>
-    <img ref={drawingRef} className="schema-hero-drawing" src={estimateHero} width="440" height="240" alt="" aria-hidden="true" />
+    <img ref={drawingRef} className="schema-hero-drawing" src={getRegion(params) === 'regions' ? estimateHeroRegions : estimateHero} width="440" height="240" alt="" aria-hidden="true" />
   </div>
 }

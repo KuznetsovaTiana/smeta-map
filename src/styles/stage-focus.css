@@ -1,0 +1,49 @@
+.process-map-row { display: contents; }
+.stage-card-support { max-height: 0; opacity: 0; overflow: hidden; margin: 0; font-size: 11px; line-height: 1.35; color: inherit; pointer-events: none; }
+.stage-card-items, .stage-card-more, .stage-card-support {
+  transition: opacity var(--motion-normal) var(--ease-out), max-height var(--motion-normal) var(--ease-out), translate var(--motion-normal) var(--ease-out);
+}
+.stage-card-items { max-height: 90px; }
+.stage-card-more { max-height: 40px; }
+.stage-card--compact { opacity: .85; filter: saturate(.75); box-shadow: none; }
+.process-map .stage-card {
+  transition-property: transform, background-color, border-color, box-shadow, opacity, filter, height;
+  transition-duration: var(--motion-reveal);
+  transition-timing-function: var(--ease-out);
+}
+.stage-card--compact .stage-card-items, .stage-card--compact .stage-card-more {
+  opacity: 0; max-height: 0; overflow: hidden; translate: 0 4px; margin: 0; padding: 0; border: 0; pointer-events: none;
+}
+@media (min-width: 1200px) {
+  .schema-page .process-map-track, .process-map-track { display: flex; flex-direction: column; gap: var(--overview-row-gap, 48px); }
+  .process-map-row {
+    --focus-row-height: 224px;
+    display: grid; grid-template-columns: var(--row-columns); grid-auto-rows: minmax(var(--focus-row-height), 1fr);
+    gap: var(--map-gap); align-items: center;
+    transition: grid-template-columns var(--motion-reveal) var(--ease-out);
+  }
+  .process-map-row > .process-map-step { grid-row: 1; grid-column: var(--desktop-column); height: 100%; display: flex; align-items: center; }
+  .process-map-track--focused .process-map-row { grid-auto-rows: minmax(calc(var(--focus-row-height) + 24px), 1fr); }
+  .process-map-track--focused .stage-card { height: calc(100% - 24px); }
+  .process-map-track--focused .stage-card--compact { height: calc(100% - 40px); }
+  .stage-card--selected, #stage-card-estimate-development.stage-card--selected, .stage-card--selected:hover {
+    --selected-scale: 1;
+    height: 100% !important; transform: none; outline-width: 2px; z-index: 3;
+    animation: focus-card-reveal var(--motion-reveal) var(--ease-out);
+  }
+  .stage-card--selected .stage-card-support { opacity: .85; max-height: 3em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .stage-card--selected .stage-card-number::before { content: 'ЭТАП '; font-size: 9px; letter-spacing: .8px; vertical-align: middle; }
+  .stage-card--selected .stage-card-number { font-size: 24px; }
+  .stage-card--compact, .stage-card--compact:hover { transform: scale(.97); box-shadow: none; border-color: var(--color-border); }
+}
+@media (min-width: 1200px) and (min-height: 700px) {
+  .process-map-row { --focus-row-height: clamp(172px, 18dvh, 205px); }
+  .stage-card--selected, .schema-page .stage-card--selected { gap: 5px; }
+}
+@media (min-width: 601px) and (max-width: 1199px) {
+  .stage-card--selected, #stage-card-estimate-development.stage-card--selected { --selected-scale: 1.025; }
+}
+@keyframes focus-card-reveal { from { opacity: .85; translate: 0 3px; } to { opacity: 1; translate: 0 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .process-map-row, .stage-card-items, .stage-card-more, .stage-card-support { transition: none !important; }
+}

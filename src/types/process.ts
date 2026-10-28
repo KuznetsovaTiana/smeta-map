@@ -3,6 +3,7 @@ import type { Region } from './region'
 export type ViewMode = 'overview' | 'detailed'
 
 export interface Stage {
+  shortTitle: string
   id: string
   order: number
   title: string

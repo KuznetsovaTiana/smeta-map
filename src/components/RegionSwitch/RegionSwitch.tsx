@@ -18,8 +18,8 @@ export function RegionSwitch() {
     next.set('region', value)
     if (value !== region) setParams(next)
   }
-  return <div className="region-switch" role="group" aria-label="Территория строительства">
+  return <div className="region-control"><div className="region-switch" role="group" aria-label="Территория строительства">
     <button type="button" aria-pressed={region === 'moscow'} onClick={() => selectRegion('moscow')}>Москва</button>
     <button type="button" aria-pressed={region === 'regions'} onClick={() => selectRegion('regions')}>Регионы</button>
-  </div>
+  </div><span className="region-caption">{region === 'moscow' ? 'Московская нормативная база и материалы' : 'Федеральные и региональные материалы'}</span></div>
 }

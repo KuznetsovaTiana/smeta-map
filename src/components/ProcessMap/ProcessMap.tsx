@@ -1,4 +1,5 @@
-﻿import { useEffect, useState } from 'react'
+import type { CSSProperties } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { RelatedDocuments } from '../RelatedDocuments/RelatedDocuments'
 import { InfluenceLayers } from '../InfluenceLayers/InfluenceLayers'
@@ -22,6 +23,33 @@ export function ProcessMap() {
   const activeFactor = previewId ?? (linkedItem?.layerId ? linkedItem.id : null)
   const influenced = detailed ? connections.filter(connection => connection.type !== 'sequence' && connection.source === activeFactor).map(connection => connection.target) : []
   const mobile = useMobileLayout()
+  const pendingStageScroll = useRef<string | null>(null)
+  function selectStageFromCard(stageId: string) {
+    pendingStageScroll.current = selectedStage?.id === stageId ? null : stageId
+    selectStage(stageId)
+  }
+  const selectedStageId = selectedStage?.id
+  useEffect(() => {
+    if (!selectedStageId || pendingStageScroll.current !== selectedStageId) return
+    const frame = requestAnimationFrame(() => {
+      const target = document.getElementById(`stage-details-${selectedStageId}`)
+      if (!target) return
+      pendingStageScroll.current = null
+      const rect = target.getBoundingClientRect()
+      const viewportHeight = window.innerHeight
+      const header = document.querySelector<HTMLElement>('.header')
+      const headerPosition = header ? getComputedStyle(header).position : ''
+      const visibleTop = header && ['sticky', 'fixed'].includes(headerPosition)
+        ? Math.max(0, header.getBoundingClientRect().bottom) : 0
+      if (rect.top >= visibleTop && rect.top < viewportHeight) return
+      const desiredTop = Math.max(visibleTop, viewportHeight * (mobile ? .3 : .55))
+      window.scrollTo({
+        top: Math.max(0, window.scrollY + rect.top - desiredTop),
+        behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      })
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [selectedStageId, mobile])
   useEffect(() => {
     if (!location.state?.fromSearch || !selectedStage) return
     const frame = requestAnimationFrame(() => {
@@ -38,7 +66,7 @@ export function ProcessMap() {
   return (
     <section className="process-map" aria-label="Карта этапов работы сметчика">
       <div className="process-map-toolbar">
-        <span className="process-map-count">{orderedStages.length} основных этапов</span>
+        <span className="process-map-count">Процесс / {orderedStages.length} этапов</span>
         <ViewModeSwitch mode={mode} onChange={value => { setPreviewId(null); changeMode(value) }} />
       </div>
       <p className="process-map-hint" id="process-map-hint">
@@ -47,19 +75,24 @@ export function ProcessMap() {
         {' '}Нажмите на карточку, чтобы раскрыть этап.
       </p>
       <div className="process-map-scroll" role="region" aria-label="Последовательность этапов" aria-describedby="process-map-hint">
-        <ol className="process-map-track">
-          {orderedStages.map((stage, index) => (
-            <li className="process-map-step" key={stage.id}>
-              <StageCard mobile={mobile} selectedItemId={params.get('item')} onSelectDocument={selectDocument} influence={influenced.length ? influenced.includes(stage.id) ? 'related' : 'muted' : undefined} stage={stage} selected={selectedStage?.id === stage.id} onSelect={selectStage} />
+        <div className={`process-map-track${selectedStage ? ' process-map-track--focused' : ''}`} role="list" style={{ '--process-progress': selectedStage ? `${(selectedStage.order + .5) / 12 * 100}%` : '0%', '--single-columns': orderedStages.map(stage => `minmax(0, ${stage.id === selectedStageId ? 3 : 1}fr)`).join(' ') } as CSSProperties}>
+          {[orderedStages.slice(0, 5), orderedStages.slice(5)].map((row, rowIndex) => {
+            const selectedColumn = selectedStage && row.some(stage => stage.id === selectedStage.id) ? (rowIndex === 0 ? selectedStage.order - 1 : 10 - selectedStage.order) : -1
+            const columns = Array.from({ length: 5 }, (_, col) => `minmax(0, ${col === selectedColumn ? 1.25 : selectedColumn >= 0 ? .9375 : 1}fr)`).join(' ')
+            return <div className="process-map-row" key={rowIndex} style={{ '--row-columns': columns } as CSSProperties}>
+          {row.map(stage => (
+            <div className="process-map-step" role="listitem" data-order={stage.order} data-reached={selectedStage ? stage.order <= selectedStage.order : false} key={stage.id} style={{ '--desktop-column': rowIndex === 0 ? stage.order : 11 - stage.order } as CSSProperties}>
+              <StageCard compact={!!selectedStage && selectedStage.id !== stage.id} mobile={mobile} selectedItemId={params.get('item')} onSelectDocument={selectDocument} influence={influenced.length ? influenced.includes(stage.id) ? 'related' : 'muted' : undefined} stage={stage} selected={selectedStage?.id === stage.id} onSelect={selectStageFromCard} />
               {mobile && selectedStage?.id === stage.id && details}
-              {index < orderedStages.length - 1 && (
+              {stage.order < orderedStages.length && (
                 <span className="process-map-connector" aria-hidden="true">
                   <svg viewBox="0 0 40 16" fill="none"><path d="M1 8h36m-6-6 6 6-6 6" /></svg>
                 </span>
               )}
-            </li>
+            </div>
           ))}
-        </ol>
+          </div>})}
+        </div>
       </div>
       {!mobile && details}
       {invalidSelection && <p className="selection-empty" role="status">Указанный этап или элемент не найден. Выберите этап на карте или воспользуйтесь поиском.</p>}
