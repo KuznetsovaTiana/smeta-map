@@ -11,6 +11,9 @@ import './styles/viewport-overview.css'
 import './styles/stage-focus.css'
 import './styles/single-row-map.css'
 import './styles/process-composition.css'
+import './styles/lifecycle.css'
+import './styles/lifecycle-map.css'
+import './styles/lifecycle-node.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -1,20 +1,36 @@
 ﻿import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { AppLayout } from './layouts/AppLayout'
-import { SchemaPage } from './pages/SchemaPage/SchemaPage'
-import { DocumentsPage } from './pages/DocumentsPage/DocumentsPage'
-import { RegulationsPage } from './pages/RegulationsPage/RegulationsPage'
+import { LifecycleHomePage } from './pages/Lifecycle/LifecycleHomePage'
+import { LifecycleNodePage } from './pages/Lifecycle/LifecycleNodePage'
+import { LifecycleDocumentPage } from './pages/Lifecycle/LifecycleDocumentPage'
+import { LifecycleCatalogPage } from './pages/Lifecycle/LifecycleCatalogPage'
+import type { ContentRepository } from './services/contentRepository'
 
 function SchemaRedirect() {
   const { search } = useLocation()
   return <Navigate to={{ pathname: '/schema', search }} replace />
 }
 
-export default function App() {
-  return <HashRouter><Routes><Route element={<AppLayout />}>
+const nodeRoutes = [
+  'schema/processes/:processId',
+  'schema/processes/:processId/blocks/:blockId',
+  'schema/processes/:processId/operations/:operationId',
+  'schema/processes/:processId/blocks/:blockId/operations/:operationId',
+]
+
+export function AppRoutes({ repository }: { repository?: ContentRepository }) {
+  return <Routes><Route element={<AppLayout />}>
     <Route index element={<SchemaRedirect />} />
-    <Route path="schema" element={<SchemaPage />} />
-    <Route path="documents" element={<DocumentsPage />} />
-    <Route path="regulations" element={<RegulationsPage />} />
+    <Route path="schema" element={<LifecycleHomePage repository={repository} />} />
+    {nodeRoutes.map(path => <Route key={path} path={path} element={<LifecycleNodePage repository={repository} />} />)}
+    {nodeRoutes.map(path => <Route key={`${path}/documents`} path={`${path}/documents/:documentId`} element={<LifecycleDocumentPage repository={repository} />} />)}
+    <Route path="documents" element={<LifecycleCatalogPage repository={repository} />} />
+    <Route path="documents/:documentId" element={<LifecycleDocumentPage repository={repository} />} />
+    <Route path="regulations" element={<LifecycleCatalogPage repository={repository} normative />} />
     <Route path="*" element={<section><h1>Страница не найдена</h1><p>Выберите раздел в верхнем меню.</p></section>} />
-  </Route></Routes></HashRouter>
+  </Route></Routes>
+}
+
+export default function App() {
+  return <HashRouter><AppRoutes /></HashRouter>
 }

@@ -1,0 +1,31 @@
+/* Функциональная раскладка; окончательный дизайн карты выполняется отдельно. */
+.lifecycle-page { min-width: 0; }
+.lifecycle-page h1 { overflow-wrap: anywhere; }
+.lifecycle-page h2 { margin: 24px 0 16px; }
+.lifecycle-page h3 { margin: 0; font-size: 18px; line-height: 1.4; }
+.lifecycle-home .schema-hero { margin-bottom: 28px; }
+.lifecycle-heading { padding: 20px 0 24px; border-bottom: 1px solid var(--color-border); margin-bottom: 24px; }
+.lifecycle-heading p:not(.eyebrow) { margin-top: 16px; }
+.lifecycle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; list-style: none; padding: 0; margin: 16px 0; }
+.lifecycle-grid > li { min-width: 0; }
+.lifecycle-card { display: flex; height: 100%; flex-direction: column; gap: 12px; padding: 20px; border: 1px solid var(--color-border); border-top: 3px solid var(--accent, var(--color-terracotta)); border-radius: var(--radius-card); background: var(--color-surface); text-decoration: none; overflow-wrap: anywhere; }
+.lifecycle-card:hover { border-color: var(--accent, var(--color-terracotta)); }
+.lifecycle-card > :last-child { margin-top: auto; }
+.lifecycle-card h2 { margin: 0; font-size: 19px; }
+.lifecycle-number { font-family: var(--font-mono); color: var(--accent, var(--color-terracotta)); }
+.lifecycle-breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 6px 12px; padding: 0; list-style: none; margin: 0 0 20px; font-size: 13px; }
+.lifecycle-breadcrumbs li { overflow-wrap: anywhere; min-width: 0; }
+.lifecycle-breadcrumbs li:not(:first-child)::before { content: '/'; margin-right: 12px; color: var(--color-muted); }
+.lifecycle-breadcrumbs [aria-current='page'] { font-weight: 600; }
+.lifecycle-back { display: inline-block; padding: 8px 0; }
+.lifecycle-status { margin: 16px 0; padding: 16px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-small); }
+.lifecycle-status h1 { font-size: 28px; margin-bottom: 12px; }
+.lifecycle-actions { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
+.lifecycle-actions button { padding: 8px 12px; border: 1px solid var(--color-border); background: var(--color-card); color: inherit; border-radius: var(--radius-small); }
+.lifecycle-operations { padding-left: 24px; }
+.lifecycle-operations li { margin-bottom: 10px; padding-left: 6px; }
+.lifecycle-operations a { display: inline-block; padding: 6px 0; }
+.lifecycle-materials { display: grid; gap: 16px; padding: 0; list-style: none; }
+.lifecycle-materials li { padding: 16px; border: 1px solid var(--color-border); background: var(--color-surface); overflow-wrap: anywhere; }
+.lifecycle-materials p { margin: 10px 0; }
+@media (max-width: 600px) { .lifecycle-breadcrumbs ol { font-size: 12px; } .lifecycle-card { padding: 16px; } }

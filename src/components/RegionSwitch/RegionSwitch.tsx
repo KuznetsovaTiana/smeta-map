@@ -1,11 +1,14 @@
 ﻿import { useEffect } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { getRegion } from '../../utils/routing'
 import type { Region } from '../../types/region'
+import { regionChangePath } from '../../utils/contentRoutes'
 
 export function RegionSwitch() {
   const [params, setParams] = useSearchParams()
   const region = getRegion(params)
+  const location = useLocation()
+  const navigate = useNavigate()
   useEffect(() => {
     const value = params.get('region')
     if (value && !['moscow', 'regions'].includes(value)) {
@@ -16,7 +19,12 @@ export function RegionSwitch() {
   function selectRegion(value: Region) {
     const next = new URLSearchParams(params)
     next.set('region', value)
-    if (value !== region) setParams(next)
+    if (value === region) return
+    const pathname = regionChangePath(location.pathname)
+    if (pathname !== location.pathname) {
+      next.delete('material')
+      navigate({ pathname, search: `?${next}` })
+    } else setParams(next)
   }
   return <div className="region-control"><div className="region-switch" role="group" aria-label="Территория строительства">
     <button type="button" aria-pressed={region === 'moscow'} onClick={() => selectRegion('moscow')}>Москва</button>

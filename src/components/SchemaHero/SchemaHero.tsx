@@ -31,7 +31,7 @@ export function SchemaHero() {
   return <div ref={heroRef} className="schema-hero">
     <div className="schema-hero-copy">
       <h1>Сметное дело</h1>
-      <p className="schema-hero-tagline">От предварительной оценки стоимости до закрытия проекта</p>
+      <p className="schema-hero-tagline">Ценообразование и сметное дело на жизненном цикле объекта капитального строительства</p>
     </div>
     <img ref={drawingRef} className="schema-hero-drawing" src={getRegion(params) === 'regions' ? estimateHeroRegions : estimateHero} width="440" height="240" alt="" aria-hidden="true" />
   </div>
