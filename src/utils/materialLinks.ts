@@ -8,9 +8,9 @@ export function getMaterialHref(material: Pick<Material, 'url' | 'linkCheck'>): 
   if (!value || /\s/.test(value)) return null
   try {
     const url = new URL(value)
-    if (!['https:', 'http:'].includes(url.protocol) || url.username || url.password) return null
+    if (url.protocol !== 'https:' || url.username || url.password || url.port) return null
     const host = url.hostname.toLowerCase().replace(/\.$/, '')
-    if (['example.com', 'example.org', 'example.net', 'localhost'].some(name => host === name || host.endsWith(`.${name}`))) return null
+    if (!['disk.yandex.ru', 'yadi.sk'].includes(host) || url.pathname === '/') return null
     if (/(\.\.\.|…|\{[^}]*\}|<[^>]*>)/.test(decodeURIComponent(value))) return null
     return url.href
   } catch { return null }

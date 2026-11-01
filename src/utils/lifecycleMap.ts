@@ -1,5 +1,13 @@
 import type { LifecycleStructure } from '../types/lifecycle.ts'
 
+/** Группирует представление, не меняя порядок и не копируя исходные сущности. */
+export function groupProcessRows<T>(processes: T[], columns: number): T[][] {
+  if (!Number.isSafeInteger(columns) || columns < 1) throw new RangeError('Количество колонок должно быть положительным целым числом.')
+  const rows: T[][] = []
+  for (let start = 0; start < processes.length; start += columns) rows.push(processes.slice(start, start + columns))
+  return rows
+}
+
 /** Краткая подпись — производное представление, исходное название не меняется. */
 export function compactProcessTitle(title: string): string {
   const words = title.replace(/\s*\([^)]*\)/g, '').replace(/\s+стадия$/u, '').trim().split(/\s+/)

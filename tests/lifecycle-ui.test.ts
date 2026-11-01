@@ -11,7 +11,8 @@ import { LocalContentRepository } from '../src/services/localContentRepository.t
 import { lifecycleContent } from '../src/data/lifecycleContent.ts'
 import type { NodeContent } from '../src/services/contentRepository.ts'
 import type { Material, MaterialType } from '../src/types/document.ts'
-import type { LifecycleStructure } from '../src/types/lifecycle.ts'
+import type { LifecycleStructure, Process } from '../src/types/lifecycle.ts'
+import type { ReactNode } from 'react'
 
 // Существующий Vite трансформирует TSX для node:test, зависимости не добавляются.
 let server: ViteDevServer
@@ -19,13 +20,15 @@ let NodeContentView: ComponentType<{ content: NodeContent }>
 let MaterialList: ComponentType<{ materials: Material[]; types: MaterialType[] }>
 let QueryFeedback: ComponentType<{ state: { status: string; message?: string; error?: { code: 'source-error'; message: string }; reload: () => Promise<void> }; regionId: string }>
 let LifecycleMap: ComponentType<{ structure: LifecycleStructure; regionId: string; selectedId: string | null; onSelect: (id: string | null) => void }>
+let LifecycleProcessRows: ComponentType<{ processes: Process[]; columns: 2 | 3; activeId: string | null; renderCard: (process: Process, index: number) => ReactNode; panel: ReactNode }>
 
 before(async () => {
-  server = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
+  server = await createServer({ server: { middlewareMode: true, hmr: false }, appType: 'custom', logLevel: 'error' })
   NodeContentView = (await server.ssrLoadModule('/src/components/Lifecycle/NodeContentView.tsx')).NodeContentView
   MaterialList = (await server.ssrLoadModule('/src/components/Lifecycle/MaterialList.tsx')).MaterialList
   QueryFeedback = (await server.ssrLoadModule('/src/components/Lifecycle/QueryFeedback.tsx')).QueryFeedback
   LifecycleMap = (await server.ssrLoadModule('/src/components/Lifecycle/LifecycleMap.tsx')).LifecycleMap
+  LifecycleProcessRows = (await server.ssrLoadModule('/src/components/Lifecycle/LifecycleProcessRows.tsx')).LifecycleProcessRows
 })
 after(async () => { await server?.close() })
 
@@ -85,6 +88,26 @@ test('материал без допустимой ссылки не имеет 
   assert.ok(!html.includes('<a '))
 })
 
+test('несколько материалов: отдельные названия, типы, форматы, описания и только ссылки Яндекс Диска', () => {
+  const html = renderToStaticMarkup(createElement(MaterialList, {
+    types: [{ id: 'custom', title: 'Новый тип материала' }],
+    materials: [
+      { id: 'test-yandex-one', documentId: 'test-document', title: 'Первый тестовый материал', order: 1, typeId: 'custom', format: 'PDF', description: 'Описание первого материала', url: 'https://disk.yandex.ru/d/test-only' },
+      { id: 'test-yandex-two', documentId: 'test-document', title: 'Второй тестовый материал', order: 2, typeId: 'custom', url: 'https://yadi.sk/i/test-only' },
+      { id: 'test-missing', documentId: 'test-document', title: 'Файл отсутствует', order: 3, typeId: 'custom' },
+      { id: 'test-prohibited', documentId: 'test-document', title: 'Недопустимый сервис', order: 4, typeId: 'custom', url: 'https://drive.google.com/file/d/test-only' },
+    ],
+  }))
+  assert.equal((html.match(/target="_blank"/g) ?? []).length, 2)
+  assert.equal((html.match(/rel="noopener noreferrer"/g) ?? []).length, 2)
+  assert.ok(html.includes('Описание первого материала'))
+  assert.ok(html.includes('Новый тип материала · PDF'))
+  assert.ok(html.includes('https://disk.yandex.ru/d/test-only'))
+  assert.ok(html.includes('https://yadi.sk/i/test-only'))
+  assert.ok(!html.includes('href="https://drive.google.com'))
+  assert.equal((html.match(/Файл пока отсутствует или ссылка недоступна/g) ?? []).length, 2)
+})
+
 test('загрузка, отсутствие результата и ошибка — разные состояния UI', () => {
   const render = (state: ComponentProps<typeof QueryFeedback>) => renderToStaticMarkup(createElement(MemoryRouter, null, createElement(QueryFeedback, state)))
   const loading = render({ state: { status: 'loading', reload: async () => {} }, regionId: 'regions' })
@@ -122,7 +145,7 @@ test('частичное и полное наполнение отображаю
   const catalog = snapshot.catalogs[0]
   const document = catalog.documents.find(entry => entry.owner.id === 'design-p-vor')!
   catalog.materials.push(
-    { id: 'test-one', documentId: document.id, typeId: 'example', order: 1, title: 'Тестовый образец', url: 'https://drive.google.com/file/d/test-ui-only/view' },
+    { id: 'test-one', documentId: document.id, typeId: 'example', order: 1, title: 'Тестовый образец', url: 'https://disk.yandex.ru/d/test-ui-only/view' },
     { id: 'test-two', documentId: document.id, typeId: 'template', order: 2, title: 'Тестовый шаблон' },
   )
   const repository = new LocalContentRepository(snapshot)
@@ -131,7 +154,7 @@ test('частичное и полное наполнение отображаю
   if (first.status !== 'success') throw new Error('Нет содержимого')
   assert.ok(renderNode(first.data).includes('data-content-status="partial"'))
   assert.ok(renderNode(first.data).includes('Доступно 1 из 2 материалов'))
-  catalog.materials[1].url = 'https://drive.google.com/file/d/test-ui-only-two/view'
+  catalog.materials[1].url = 'https://disk.yandex.ru/d/test-ui-only-two/view'
   const second = await repository.getOperation('design-p-vor', 'moscow')
   assert.equal(second.status, 'success')
   if (second.status !== 'success') throw new Error('Нет содержимого')
@@ -139,25 +162,24 @@ test('частичное и полное наполнение отображаю
   assert.ok(renderNode(second.data).includes('Все материалы доступны: 2 из 2'))
 })
 
-test('карта: первый процесс выбран по умолчанию, область сведений всегда присутствует', async () => {
+test('карта: шесть процессов, раскрытие выбранного без перехода на страницу', async () => {
   const result = await contentRepository.getStructure('moscow')
   if (result.status !== 'success') throw new Error('Нет структуры')
   const renderMap = (selectedId: string | null, regionId = 'moscow') => renderToStaticMarkup(createElement(MemoryRouter, null,
     createElement(LifecycleMap, { structure: result.data, regionId, selectedId, onSelect: () => {} })))
   const initial = renderMap(null)
-  assert.equal((initial.match(/aria-pressed="false"/g) ?? []).length, 5)
-  assert.equal((initial.match(/aria-pressed="true"/g) ?? []).length, 1)
-  assert.ok(initial.includes('lifecycle-process-info"'))
-  assert.ok(initial.includes('Открыть процесс'))
-  assert.ok(initial.includes('/schema/processes/pre-design?region=moscow'))
-  assert.ok(renderMap('missing').includes('/schema/processes/pre-design?region=moscow'))
+  assert.equal((initial.match(/aria-pressed="false"/g) ?? []).length, 6)
+  assert.equal((initial.match(/aria-pressed="true"/g) ?? []).length, 0)
+  assert.ok(!initial.includes('lifecycle-tree-panel'))
+  assert.ok(!initial.includes('Открыть процесс'))
+  assert.ok(!renderMap('missing').includes('lifecycle-tree-panel'))
   for (const process of result.data.processes) {
     const html = renderMap(process.id, 'regions')
     assert.equal((html.match(/aria-pressed="true"/g) ?? []).length, 1)
     assert.ok(html.includes(process.title))
-    assert.ok(html.includes(`/schema/processes/${process.id}?region=regions`))
-    assert.ok(html.includes('Открыть процесс'))
-    assert.ok(html.includes('Состав процесса'))
+    assert.ok(!html.includes('/schema/processes/'))
+    assert.ok(html.includes('lifecycle-tree-panel'))
+    assert.ok(!html.includes('lifecycle-process-junction'))
     assert.ok(html.includes('minmax(0, 3.2fr)'))
     assert.equal((html.match(/minmax\(0, 0.85fr\)/g) ?? []).length, 5)
   }
@@ -198,4 +220,30 @@ test('карточки разделов показывают доступные 
   assert.ok(html.includes('Файлы не добавлены'))
   assert.ok(html.includes('Доступно материалов: <strong>0</strong> из 1'))
   assert.ok(!html.includes('target="_blank"'))
+})
+
+test('панель вставлена ровно один раз после завершённой выбранной строки для каждого процесса', async () => {
+  const result = await contentRepository.getStructure('moscow')
+  assert.ok(result.status === 'success')
+  const processes = result.data.processes
+  for (const columns of [2, 3] as const) {
+    for (const [selectedIndex, process] of processes.entries()) {
+      const html = renderToStaticMarkup(createElement(LifecycleProcessRows, {
+        processes, columns, activeId: process.id,
+        renderCard: (entry, index) => createElement('li', { key: entry.id, 'data-card-index': index }, entry.title),
+        panel: createElement('section', { 'data-test-panel': true }, 'Выбранный процесс'),
+      }))
+      assert.equal((html.match(/data-test-panel/g) ?? []).length, 1)
+      const row = Math.floor(selectedIndex / columns)
+      const endIndex = Math.min(processes.length - 1, (row + 1) * columns - 1)
+      const rowStart = html.indexOf(`data-map-row="${row}"`)
+      const lastCard = html.indexOf(`data-card-index="${endIndex}"`)
+      const panel = html.indexOf('data-test-panel')
+      const nextRow = html.indexOf(`data-map-row="${row + 1}"`)
+      assert.ok(rowStart < lastCard && lastCard < panel)
+      assert.ok(html.slice(lastCard, panel).includes('</ol>'))
+      if (nextRow >= 0) assert.ok(panel < nextRow)
+      assert.equal((html.match(/data-card-index/g) ?? []).length, 6)
+    }
+  }
 })

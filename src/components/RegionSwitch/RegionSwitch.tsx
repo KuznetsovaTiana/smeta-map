@@ -20,6 +20,9 @@ export function RegionSwitch() {
     const next = new URLSearchParams(params)
     next.set('region', value)
     if (value === region) return
+    // Document IDs are regional. Preserve structural selection, never a foreign document.
+    next.delete('document')
+    next.delete('material')
     const pathname = regionChangePath(location.pathname)
     if (pathname !== location.pathname) {
       next.delete('material')

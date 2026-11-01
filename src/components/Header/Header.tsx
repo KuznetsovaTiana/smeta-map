@@ -4,8 +4,6 @@ import { getRegion, getRegionSearch } from '../../utils/routing'
 
 const navigation = [
   { path: '/schema', label: 'Схема' },
-  { path: '/documents', label: 'Документы' },
-  { path: '/regulations', label: 'Нормативная база' },
 ]
 
 export function Header() {

@@ -46,7 +46,7 @@ test('статус и тип каждой позиции вычисляются 
   data.documentTypes.push({ id: 'test-type', title: 'Тестовый тип позиции' })
   document.documentTypeId = 'test-type'
   data.catalogs[0].materials.push(
-    { id: 'test-available', documentId: document.id, order: 1, title: 'Тестовый материал', typeId: 'example', url: 'https://drive.google.com/file/d/node-test-only/view' },
+    { id: 'test-available', documentId: document.id, order: 1, title: 'Тестовый материал', typeId: 'example', url: 'https://disk.yandex.ru/d/node-test-only/view' },
     { id: 'test-pending', documentId: document.id, order: 2, title: 'Тестовый шаблон', typeId: 'template' },
   )
   const repository = new LocalContentRepository(data)
@@ -71,7 +71,7 @@ test('позиции без файлов, с нерабочими ссылкам
   assert.equal(getDocumentAvailability([]).status, 'unavailable')
   const material = { id: 'test-only', documentId: 'test-document', order: 1, title: 'Тестовый материал', typeId: 'example' }
   assert.equal(getDocumentAvailability([{ ...material, url: '#' }]).counts.availableMaterials, 0)
-  const working = { ...material, url: 'https://drive.google.com/file/d/node-test-only/view' }
+  const working = { ...material, url: 'https://disk.yandex.ru/d/node-test-only/view' }
   assert.equal(getDocumentAvailability([working]).status, 'complete')
   assert.equal(getDocumentAvailability([working, { ...material, id: 'test-second', order: 2 }]).status, 'partial')
   assert.equal(getDocumentAvailability([{ ...working, linkCheck: 'broken' }]).status, 'unavailable')

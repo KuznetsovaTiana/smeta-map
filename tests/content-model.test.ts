@@ -9,7 +9,7 @@ import { getMaterialHref } from '../src/utils/materialLinks.ts'
 // Изолированные синтетические данные. Не импортируются приложением, сеть не используется.
 const owner = { kind: 'process', id: 'test-process' } satisfies NodeRef
 const child = { kind: 'block', id: 'test-p' } satisfies NodeRef
-const testUrl = 'https://drive.google.com/file/d/test-fixture-only/view'
+const testUrl = 'https://disk.yandex.ru/d/test-fixture-only/view'
 
 function fixture(): ContentSnapshot {
   return {

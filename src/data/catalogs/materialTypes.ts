@@ -20,7 +20,7 @@ export const materialTypes: MaterialType[] = [
   },
   {
     "id": "drive-folder",
-    "title": "Папка Google Drive"
+    "title": "Папка Яндекс Диска"
   },
   {
     "id": "reference",

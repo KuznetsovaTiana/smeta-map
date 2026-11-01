@@ -43,7 +43,7 @@ try {
     if (innerWidth < 1366) {
       const grid = document.querySelector('.lifecycle-map-track')!
       const columns = getComputedStyle(grid).gridTemplateColumns.split(' ').length
-      assert(columns === (innerWidth < 768 ? 1 : 3), 'Неверное количество колонок')
+      assert(columns === (innerWidth < 768 ? 2 : 3), 'Неверное количество колонок')
       const track = grid.getBoundingClientRect()
       assert(Math.abs((track.left + track.right) / 2 - (bounds.left + bounds.right) / 2) < 2, 'Сетка не центрирована')
     }
@@ -56,15 +56,35 @@ try {
     assert(style.display !== 'none' && style.visibility === 'visible' && panel.getBoundingClientRect().height > 0, 'Информация скрыта')
     const region = document.querySelector('.lifecycle-map-viewport')!.getBoundingClientRect()
     const box = panel.getBoundingClientRect()
-    assert(box.top >= region.bottom - 1 && box.top - region.bottom <= 12, 'Лишняя пустота между картой и информацией')
     const selected = document.querySelector('.lifecycle-process-button[aria-pressed="true"]')!
+    if (innerWidth < 1366) {
+      const columns = innerWidth < 768 ? 2 : 3
+      const group = selected.closest<HTMLElement>('.lifecycle-map-row-group')
+      assert(group && panel.parentElement === group, 'Панель расположена не в выбранной группе строк')
+      const rowIndex = Math.floor(cards.indexOf(selected as HTMLButtonElement) / columns)
+      assert(group.dataset.mapRow === String(rowIndex), 'Неправильная строка для выбранного процесса')
+      const row = group.querySelector('.lifecycle-map-track')!
+      assert(panel.previousElementSibling === row, 'Панель вставлена не после законченной строки')
+      assert(row.querySelectorAll('.lifecycle-map-step').length === columns, 'Карточки не сгруппированы в законченную строку')
+      const rowBox = row.getBoundingClientRect()
+      assert(box.top >= rowBox.bottom - 1 && box.top - rowBox.bottom <= 12, 'Панель не непосредственно под строкой')
+      assert(Math.abs(box.left - rowBox.left) < 2 && Math.abs(box.width - rowBox.width) < 2, 'Панель не занимает всю ширину строки')
+      const nextGroup = group.nextElementSibling
+      if (nextGroup) assert(nextGroup.getBoundingClientRect().top >= box.bottom, 'Следующая строка выше или поверх панели')
+      assert(document.querySelectorAll('.lifecycle-process-info').length === 1, 'Информационная панель продублирована')
+    } else {
+      assert(box.top >= region.bottom - 1 && box.top - region.bottom <= 12, 'Desktop-панель не под общей строкой')
+      assert(!document.querySelector('.lifecycle-map-row-group'), 'Desktop неожиданно разбит на группы')
+    }
     assert(panel.querySelector('h2')?.textContent === selected.getAttribute('title'), 'Неполное название в сведениях')
     assert(!panel.querySelector('.lifecycle-process-totals'), 'Остались удалённые счётчики')
-    assert(panel.querySelector('.lifecycle-process-composition'), 'Нет состава процесса')
-    assert(panel.querySelector('.lifecycle-open-process'), 'Нет кнопки перехода')
+    assert(panel.querySelector('.lifecycle-tree-content'), 'Нет дерева процесса')
+    assert(!panel.querySelector('.lifecycle-open-process'), 'Осталась кнопка отдельной страницы')
+    assert(!selected.querySelector('.lifecycle-process-junction'), 'Остался удалённый перешеек')
+    assert(getComputedStyle(selected, '::after').content === 'none', 'Вернулся прямоугольный выступ')
     assert(getComputedStyle(document.querySelector('.main-content')!).flexGrow === '0', 'Содержимое растягивается ради футера')
   }
-  checkInfo()
+  assert(!document.querySelector('.lifecycle-tree-panel'), 'Процесс раскрыт до выбора')
   if (innerWidth >= 1366) {
     const centres = cards.map(button => { const rect = button.getBoundingClientRect(); return rect.top + rect.height / 2 })
     assert(Math.max(...centres) - Math.min(...centres) < 2, 'Карточки не в одну линию')
@@ -84,28 +104,32 @@ try {
     assert(document.querySelectorAll('.lifecycle-process-button[aria-pressed="true"]').length === 1, 'Несколько выбранных процессов')
     const selected = cards[index].getBoundingClientRect()
     const inactive = cards[(index + 1) % cards.length].getBoundingClientRect()
-    assert(selected.width > inactive.width + (innerWidth >= 1366 ? 10 : 5), 'Активная карточка не расширилась')
+    if (innerWidth < 1366) {
+      assert(Math.abs(selected.width - inactive.width) < 2, 'Карточки сетки имеют разную ширину')
+      const row = cards[index].closest('.lifecycle-map-track')!
+      const heights = [...row.querySelectorAll('.lifecycle-process-button')].map(card => card.getBoundingClientRect().height)
+      assert(Math.max(...heights) - Math.min(...heights) < 2, 'Карточки строки имеют разную высоту')
+    }
     if (innerWidth >= 1366) {
       assert(selected.width > inactive.width * 3, 'Недостаточно выраженное увеличение активной карточки')
       const compact = cards.filter((_card, cardIndex) => cardIndex !== index).map(card => card.getBoundingClientRect().width)
       assert(Math.max(...compact) - Math.min(...compact) < 2, 'Неактивные карточки сжаты непропорционально')
     }
-    assert(cards[index].querySelector('.lifecycle-process-title')?.textContent === cards[index].getAttribute('title'), 'Полное название активной карточки отсутствует')
+    assert(cards[index].querySelector('.lifecycle-process-title-full')?.textContent === cards[index].getAttribute('title'), 'Полное название активной карточки отсутствует')
     assert(cards.filter((_card, cardIndex) => cardIndex !== index).every(card => !card.querySelector('.lifecycle-process-counts')), 'В неактивных карточках остались подробности')
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
       assert(getComputedStyle(cards[index]).transitionDuration.split(',').every(value => parseFloat(value) === 0), 'Переходы не отключены при reduced motion')
       const panel = document.querySelector('.lifecycle-process-info')!
       assert(getComputedStyle(panel).animationDuration.split(',').every(value => parseFloat(value) === 0), 'Анимация сведений не отключена')
     }
-    const link = document.querySelector('.lifecycle-open-process')
-    assert(link?.getAttribute('href')?.includes('region=moscow'), 'Нет перехода выбранного региона')
+    assert(!document.querySelector('.lifecycle-open-process'), 'Остался переход на отдельную страницу')
   }
   await act(async () => { cards[5].dispatchEvent(new KeyboardEvent('keydown', { key: 'Home', bubbles: true })) })
   assert(cards[0].getAttribute('aria-pressed') === 'true', 'Home не выбирает первый процесс')
   const regionButton = [...document.querySelectorAll<HTMLButtonElement>('.region-switch button')].find(button => button.textContent === 'Регионы')!
   await act(async () => { regionButton.click() })
   assert(document.querySelector('.lifecycle-process-button[aria-pressed="true"]')?.getAttribute('aria-label') === cards[0].getAttribute('aria-label'), 'Выбор потерян при смене региона')
-  assert(document.querySelector('.lifecycle-open-process')?.getAttribute('href')?.includes('region=regions'), 'Не обновлён регион перехода')
+  assert(document.querySelector('.lifecycle-tree-panel .eyebrow')?.textContent?.includes('Регионы'), 'Не обновлён регион дерева')
   assert(document.querySelector('.app-layout')?.getAttribute('data-region') === 'regions', 'Не обновлена тема')
   parent.postMessage({ type: 'lifecycle-map-layout', width: innerWidth, ok: true, reducedMotion: matchMedia('(prefers-reduced-motion: reduce)').matches }, location.origin)
 } catch (error) {

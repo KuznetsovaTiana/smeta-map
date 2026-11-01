@@ -1,9 +1,7 @@
 ﻿import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { AppLayout } from './layouts/AppLayout'
 import { LifecycleHomePage } from './pages/Lifecycle/LifecycleHomePage'
-import { LifecycleNodePage } from './pages/Lifecycle/LifecycleNodePage'
-import { LifecycleDocumentPage } from './pages/Lifecycle/LifecycleDocumentPage'
-import { LifecycleCatalogPage } from './pages/Lifecycle/LifecycleCatalogPage'
+import { LegacyMapEntry } from './components/Lifecycle/LegacyMapEntry'
 import type { ContentRepository } from './services/contentRepository'
 
 function SchemaRedirect() {
@@ -22,11 +20,11 @@ export function AppRoutes({ repository }: { repository?: ContentRepository }) {
   return <Routes><Route element={<AppLayout />}>
     <Route index element={<SchemaRedirect />} />
     <Route path="schema" element={<LifecycleHomePage repository={repository} />} />
-    {nodeRoutes.map(path => <Route key={path} path={path} element={<LifecycleNodePage repository={repository} />} />)}
-    {nodeRoutes.map(path => <Route key={`${path}/documents`} path={`${path}/documents/:documentId`} element={<LifecycleDocumentPage repository={repository} />} />)}
-    <Route path="documents" element={<LifecycleCatalogPage repository={repository} />} />
-    <Route path="documents/:documentId" element={<LifecycleDocumentPage repository={repository} />} />
-    <Route path="regulations" element={<LifecycleCatalogPage repository={repository} normative />} />
+    {nodeRoutes.map(path => <Route key={path} path={path} element={<LegacyMapEntry repository={repository} />} />)}
+    {nodeRoutes.map(path => <Route key={`${path}/documents`} path={`${path}/documents/:documentId`} element={<LegacyMapEntry repository={repository} />} />)}
+    <Route path="documents" element={<SchemaRedirect />} />
+    <Route path="documents/:documentId" element={<LegacyMapEntry repository={repository} />} />
+    <Route path="regulations" element={<SchemaRedirect />} />
     <Route path="*" element={<section><h1>Страница не найдена</h1><p>Выберите раздел в верхнем меню.</p></section>} />
   </Route></Routes>
 }

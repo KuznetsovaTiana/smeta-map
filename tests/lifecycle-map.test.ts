@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { readFileSync } from 'node:fs'
 import { contentRepository } from '../src/services/contentRepositoryInstance.ts'
-import { compactProcessTitle, nextProcessIndex, processMapSummary } from '../src/utils/lifecycleMap.ts'
+import { compactProcessTitle, groupProcessRows, nextProcessIndex, processMapSummary } from '../src/utils/lifecycleMap.ts'
 
 test('состав всех процессов вычисляется из структуры репозитория, включая вложенные операции', async () => {
   const result = await contentRepository.getStructure('moscow')
@@ -47,12 +47,12 @@ test('карта не содержит механизмов прокрутки, 
   const styles = readFileSync(new URL('../src/styles/lifecycle-map.css', import.meta.url), 'utf8')
   assert.doesNotMatch(component, /scrollTo|scrollLeft|onScroll|onPointerDown|onWheel|ResizeObserver/)
   assert.doesNotMatch(styles, /scroll-snap|overflow-x:\s*(auto|scroll)|width:\s*max-content|flex-basis/)
-  assert.match(styles, /grid-template-columns: minmax\(0, 1fr\)/)
+  assert.match(styles, /repeat\(2, minmax\(0, 1fr\)\)/)
   assert.match(styles, /repeat\(3, minmax\(0, 1fr\)\)/)
   assert.match(styles, /overflow-x:\s*clip/)
 })
 
-test('размеры и сведения карты не переопределяются inline-шаблоном и не зависят от ширины JS', () => {
+test('desktop-шаблон использует CSS-переменную, стили поддерживают вложенную панель', () => {
   const component = readFileSync(new URL('../src/components/Lifecycle/LifecycleMap.tsx', import.meta.url), 'utf8')
   const styles = readFileSync(new URL('../src/styles/lifecycle-map.css', import.meta.url), 'utf8')
   assert.match(component, /'--lifecycle-columns'/)
@@ -61,5 +61,23 @@ test('размеры и сведения карты не переопредел�
   assert.match(styles, /max-width: 1365px/)
   assert.match(styles, /max-width: 767px/)
   assert.match(styles, /flex: 0 0 auto/)
-  assert.match(styles, /\.lifecycle-map > \.lifecycle-process-info \{ display: grid; visibility: visible/)
+  assert.match(styles, /\.lifecycle-map \.lifecycle-process-info \{ display: grid; visibility: visible/)
+})
+
+test('каждый процесс попадает в пару на телефоне и в тройку на планшете', async () => {
+  const result = await contentRepository.getStructure('moscow')
+  assert.ok(result.status === 'success')
+  const processes = result.data.processes
+  for (const columns of [2, 3]) {
+    const rows = groupProcessRows(processes, columns)
+    assert.equal(rows.length, 6 / columns)
+    assert.deepEqual(rows.flat().map(process => process.id), processes.map(process => process.id))
+    processes.forEach((process, index) => {
+      assert.equal(rows.findIndex(row => row.some(entry => entry.id === process.id)), Math.floor(index / columns))
+      assert.equal(rows[Math.floor(index / columns)][index % columns], process)
+    })
+  }
+  assert.deepEqual(groupProcessRows([], 2), [])
+  assert.deepEqual(groupProcessRows([1, 2, 3, 4, 5], 2), [[1, 2], [3, 4], [5]])
+  assert.throws(() => groupProcessRows(processes, 0), RangeError)
 })

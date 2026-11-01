@@ -33,28 +33,16 @@ const paths = [
 try {
   for (const path of paths) {
     await act(async () => { root.render(<StrictMode><MemoryRouter key={path} initialEntries={[`${path}?region=moscow`]}><AppRoutes /></MemoryRouter></StrictMode>) })
-    assert(host.querySelector('.node-view'), `Не смонтирована страница: ${path}`)
-    assert(host.querySelectorAll('.node-heading h1').length === 1, 'Нет единственного заголовка')
+    assert(host.querySelector('.lifecycle-tree-panel'), `Не раскрыта карта: ${path}`)
+    assert(!host.querySelector('.node-view'), 'Открыта отдельная страница')
     assert(document.documentElement.scrollWidth <= innerWidth + 1, `Переполнение страницы ${path}`)
-    for (const element of host.querySelectorAll<HTMLElement>('.node-card,.node-document-card,.node-heading h1,.lifecycle-breadcrumbs')) {
+    for (const element of host.querySelectorAll<HTMLElement>('.lifecycle-tree-trigger,.lifecycle-tree-panel h2,.lifecycle-tree-nested')) {
       const rect = element.getBoundingClientRect()
       assert(rect.width > 0 && rect.left >= -1 && rect.right <= innerWidth + 1, `Элемент вне экрана: ${path}`)
       assert(element.scrollWidth <= element.clientWidth + 1, `Текст выходит за границы: ${path}`)
     }
-    const body = host.querySelector('.node-content-layout')!
-    if (innerWidth < 768) {
-      assert(getComputedStyle(body).gridTemplateColumns.split(' ').length === 1 || !body.classList.contains('node-content-layout--with-children'), 'На телефоне не одна колонка')
-      const main = host.querySelector('.main-content')!.getBoundingClientRect()
-      assert(Math.abs(main.left - (innerWidth - main.right)) < 2, 'Содержимое не центрировано')
-    }
-    assert(host.querySelector('.lifecycle-breadcrumbs a')?.getAttribute('href')?.includes('region=moscow'), 'Регион потерян в breadcrumbs')
-    if (path.endsWith('work-accounting')) assert(host.querySelectorAll('.node-document-card').length === 5, 'Нет пяти форм учёта')
-    if (path.endsWith('demolition')) assert(host.querySelectorAll('.node-operations .node-card').length === 8, 'Нет прямых операций сноса')
+    for (const button of host.querySelectorAll<HTMLButtonElement>('.lifecycle-tree-trigger')) assert(button.getBoundingClientRect().height >= 44, 'Малая область нажатия')
   }
-  const regionButton = [...host.querySelectorAll<HTMLButtonElement>('.region-switch button')].find(button => button.textContent === 'Регионы')!
-  await act(async () => { regionButton.click() })
-  assert(host.querySelectorAll('.node-document-card').length === 5, 'Не обновлён региональный каталог')
-  assert([...host.querySelectorAll('.node-document-card')].every(card => card.getAttribute('data-document-id')?.startsWith('regions-')), 'Подставлены московские документы')
   parent.postMessage({ type: 'lifecycle-node-layout', width: innerWidth, ok: true }, location.origin)
 } catch (error) {
   parent.postMessage({ type: 'lifecycle-node-layout', width: innerWidth, ok: false, message: error instanceof Error ? error.message : String(error) }, location.origin)
