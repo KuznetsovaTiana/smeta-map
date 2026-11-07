@@ -5,6 +5,7 @@ import { useContentQuery } from '../../hooks/useContentQuery'
 import type { ContentRepository } from '../../services/contentRepository.ts'
 import { getRegion } from '../../utils/routing'
 import { LifecycleMap } from '../../components/Lifecycle/LifecycleMap'
+import { ResourceMaterials } from '../../components/Resources/ResourceMaterials'
 
 export function LifecycleHomePage({ repository }: { repository?: ContentRepository }) {
   const [params, setParams] = useSearchParams()
@@ -25,5 +26,9 @@ export function LifecycleHomePage({ repository }: { repository?: ContentReposito
     {state.status === 'success' && (state.data.processes.length
       ? <><LifecycleMap key={`${regionId}:${initialOpen.join(':')}`} structure={state.data} regionId={regionId} selectedId={selectedId} onSelect={selectProcess} repository={repository} initialOpen={initialOpen} />{selectedId && !state.data.processes.some(process => process.id === selectedId) && <p role="status">Процесс не найден. Выберите процесс на карте.</p>}</>
       : <p role="status">Процессы пока не добавлены.</p>)}
+    {state.status === 'success' && <details className="lifecycle-card">
+      <summary>Нормативно-техническая документация</summary>
+      <ResourceMaterials key={regionId} itemId="regulatory-reference" region={regionId} title="Учебные и справочные материалы" />
+    </details>}
   </section>
 }

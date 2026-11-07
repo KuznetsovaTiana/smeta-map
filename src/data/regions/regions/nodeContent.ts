@@ -56,7 +56,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "block",
       "id": "ncs"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -72,7 +72,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "block",
       "id": "engineering-surveys"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -80,7 +80,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "block",
       "id": "design-works"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -104,7 +104,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "block",
       "id": "as-built-estimate"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -112,7 +112,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "block",
       "id": "estimate-expertise"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -120,7 +120,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "block",
       "id": "nmck"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -168,7 +168,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "operation",
       "id": "design-p-source-data"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -192,7 +192,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "operation",
       "id": "design-p-market-analysis"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -232,7 +232,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "operation",
       "id": "design-r-source-data"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -256,7 +256,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "operation",
       "id": "design-r-market-analysis"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "regions",
@@ -483,4 +483,3 @@ export const nodeContent: RegionalNodeContent[] = [
     "definition": "defined"
   }
 ]
-

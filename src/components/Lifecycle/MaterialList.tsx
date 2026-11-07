@@ -9,7 +9,7 @@ export function MaterialList({ materials, types }: { materials: Material[]; type
       <h3>{material.title}</h3>
       <p>{types.find(type => type.id === material.typeId)?.title ?? 'Материал'}{material.format ? ` · ${material.format}` : ''}</p>
       {material.description && <p>{material.description}</p>}
-      {href ? <a href={href} target="_blank" rel="noopener noreferrer">Открыть: {material.title}<span className="lifecycle-material-url">{href}</span></a> : <p>Файл пока отсутствует или ссылка недоступна.</p>}
+      {href ? <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Открыть: ${material.title}`}>Открыть ↗</a> : <p>Файл пока отсутствует или ссылка недоступна.</p>}
     </li>
   })}</ul>
 }

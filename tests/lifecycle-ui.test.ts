@@ -32,6 +32,19 @@ before(async () => {
 })
 after(async () => { await server?.close() })
 
+test('публичные материалы открываются в новой вкладке; недоступные не получают фиктивных ссылок', () => {
+  for (const catalog of lifecycleContent.catalogs) {
+    const html = renderToStaticMarkup(createElement(MaterialList, { materials: catalog.materials, types: lifecycleContent.materialTypes }))
+    const links = html.match(/<a\s[^>]*>/g) ?? []
+    assert.equal(links.length, catalog.materials.length)
+    assert.ok(links.every(link => link.includes('target="_blank"') && link.includes('rel="noopener noreferrer"')))
+    assert.ok(!html.includes('href="#"'))
+  }
+  const unavailable = renderToStaticMarkup(createElement(MaterialList, { materials: [], types: lifecycleContent.materialTypes }))
+  assert.ok(!unavailable.includes('<a '))
+  assert.ok(unavailable.includes('Файлы и ссылки отсутствуют'))
+})
+
 async function content(kind: 'process' | 'block' | 'operation', id: string, region = 'moscow') {
   const result = await contentRepository.getNodeContent({ kind, id }, region)
   assert.equal(result.status, 'success')
@@ -154,7 +167,7 @@ test('частичное и полное наполнение отображаю
   if (first.status !== 'success') throw new Error('Нет содержимого')
   assert.ok(renderNode(first.data).includes('data-content-status="partial"'))
   assert.ok(renderNode(first.data).includes('Доступно 1 из 2 материалов'))
-  catalog.materials[1].url = 'https://disk.yandex.ru/d/test-ui-only-two/view'
+  catalog.materials.find(material => material.id === 'test-two')!.url = 'https://disk.yandex.ru/d/test-ui-only-two/view'
   const second = await repository.getOperation('design-p-vor', 'moscow')
   assert.equal(second.status, 'success')
   if (second.status !== 'success') throw new Error('Нет содержимого')

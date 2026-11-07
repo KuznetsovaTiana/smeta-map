@@ -3,6 +3,8 @@ import { getRegion } from '../../utils/routing'
 import estimateHeroRegions from '../../assets/estimate-hero-regions.svg'
 import { useEffect, useRef } from 'react'
 import estimateHero from '../../assets/estimate-hero.svg'
+import { BookOpen, ArrowUpRight } from 'lucide-react'
+import { siteInstruction } from '../../data/siteDocuments'
 
 export function SchemaHero() {
   const [params] = useSearchParams()
@@ -33,6 +35,11 @@ export function SchemaHero() {
       <h1>Сметное дело</h1>
       <p className="schema-hero-tagline">Ценообразование и сметное дело на жизненном цикле объекта капитального строительства</p>
     </div>
+    <a className="schema-hero-instruction" href={siteInstruction.url} target="_blank" rel="noopener noreferrer" aria-label="Инструкция — открыть PDF в новой вкладке">
+      <BookOpen size={22} strokeWidth={1.5} aria-hidden="true" />
+      <span>{siteInstruction.title}<small>PDF</small></span>
+      <ArrowUpRight size={18} aria-hidden="true" />
+    </a>
     <img ref={drawingRef} className="schema-hero-drawing" src={getRegion(params) === 'regions' ? estimateHeroRegions : estimateHero} width="440" height="240" alt="" aria-hidden="true" />
   </div>
 }

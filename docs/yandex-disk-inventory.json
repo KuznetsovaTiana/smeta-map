@@ -1,0 +1,2117 @@
+[
+  {
+    "path": "/01_Москва",
+    "type": "dir",
+    "name": "01_Москва",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:acbf96a54aa64f8a8a632fa1f67f827d4594c98dd949490c9098faa52cb68b33"
+  },
+  {
+    "path": "/02_Регионы",
+    "type": "dir",
+    "name": "02_Регионы",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:4a682e438a424e5dbb2ec704784dc2054a0fe8a1015b4dbebca594e516c1c297"
+  },
+  {
+    "path": "/01_Москва/01_Предпроектная стадия",
+    "type": "dir",
+    "name": "01_Предпроектная стадия",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:acc9f3d0b498490bab8dfc8e674ae0af78a8b3ad80214229b7b9a0bdf336c490"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы",
+    "type": "dir",
+    "name": "02_Инженерные изыскания и проектные работы",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:40dae3bdca5a42fa8ded5607bab9c0a53ccbfc2e5fe64be7b4dbbc808ca7b7cd"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия",
+    "type": "dir",
+    "name": "03_Проектная стадия",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:657d5875105848ec8b8ba6d9edd98608819a33b582c24f1388240dcd1c4bc062"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства",
+    "type": "dir",
+    "name": "04_Стадия строительства",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:69d2fb4870cc44009de0204f52f0ae3be9dc0a8e2d72481fa9dac797c6ed2087"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция",
+    "type": "dir",
+    "name": "05_Эксплуатация, ремонт и реконструкция",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:da81f0cedf8e4663bf323827ce2d2e26ba9de70213a7411399f46b6f215a169f"
+  },
+  {
+    "path": "/01_Москва/06_Снос",
+    "type": "dir",
+    "name": "06_Снос",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:f47032ae0ec74bbeaeaaeaf3ff374e2f5cade715427a4c8ab39614baa67198d7"
+  },
+  {
+    "path": "/01_Москва/Нормативно-техническая документация",
+    "type": "dir",
+    "name": "Нормативно-техническая документация",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:775ae998cbc5c60e91d8dc4767e125fb698628f70deb18c1bc259fc97fe0b320"
+  },
+  {
+    "path": "/02_Регионы/01_Предпроектная стадия",
+    "type": "dir",
+    "name": "01_Предпроектная стадия",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:b9b43be5d3884afe80ea7ae6b7b8a2066e7661cac7a546f79669c485ae0dc2c9"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы",
+    "type": "dir",
+    "name": "02_Инженерные изыскания и проектные работы",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:dafabad9badd4c8492e575b1eb92822d989d33d254264ffa99fca8c98a612bef"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия",
+    "type": "dir",
+    "name": "03_Проектная стадия",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:7409613c8b3849668a7e3ed3c5147e0bc525876eb3b34e39be9aff10cca34b70"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства",
+    "type": "dir",
+    "name": "04_Стадия строительства",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:9182138067c04db1a3137b26f4bd9b4cb2151c4975d14c93893c1a18fed51ae7"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция",
+    "type": "dir",
+    "name": "05_Эксплуатация, ремонт и реконструкция",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:98ab6ffeb2544fc0a0ca7615be70d243eac992d72fd6498887dca701703b8bc9"
+  },
+  {
+    "path": "/02_Регионы/06_Снос",
+    "type": "dir",
+    "name": "06_Снос",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:3704e7f9aabc4a2abb6ffc0ed860b72957e6f5b167b74e15bb28d6888bfb51e2"
+  },
+  {
+    "path": "/02_Регионы/Нормативно-техническая документация",
+    "type": "dir",
+    "name": "Нормативно-техническая документация",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:a0d326be7cbdbf73988567ed5067be20d449e185d562119ac8510268385b8577"
+  },
+  {
+    "path": "/01_Москва/01_Предпроектная стадия/01_НЦС",
+    "type": "dir",
+    "name": "01_НЦС",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:a79ee90c4f5d4d6abf59abf91e7cf248d7472db068d8468a9fdb3241ed7dd4f2"
+  },
+  {
+    "path": "/01_Москва/01_Предпроектная стадия/02_Объекты-аналоги",
+    "type": "dir",
+    "name": "02_Объекты-аналоги",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:6de50503585649cfbccd4a8997e7668ee7edb15f38ce4622b32ad402ea3e02b2"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы",
+    "type": "dir",
+    "name": "Сметы на проектные и изыскательские работы",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:9646f9e8d06f989c43d457998eeebdc999c2ef13a7cd1e30cb5db03748e098d4"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П",
+    "type": "dir",
+    "name": "01_Стадия П",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:6c78b76252df4beb854ecad1c3c7022f7fdc6404417d4f4daef016c809b1d64d"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р",
+    "type": "dir",
+    "name": "02_Стадия Р",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:2ad89fb5b5df4b008611a18c307fc11630b3e1d8b3304f52ab5ed0433896c175"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/03_Исполнительная смета",
+    "type": "dir",
+    "name": "03_Исполнительная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:c47ffc266ef9424eaa6896b7920bcb028678bda7c74a488f981f175e047d7cad"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/04_Проверка достоверности сметной стоимости",
+    "type": "dir",
+    "name": "04_Проверка достоверности сметной стоимости",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:eae15df9da0645b7b2b365bd6f5db5ce311d9fc732b84c83b2350daf26a97dce"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/01_НМЦК",
+    "type": "dir",
+    "name": "01_НМЦК",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:3d327a75aff04a28acd8343af21b80a205e028f2ea01414f8e61f8288cd48b53"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/02_Смета контракта",
+    "type": "dir",
+    "name": "02_Смета контракта",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:c53c7337fa1e4954b1f2da28dba8dc198e1724acba1d4ab2a0ed58edafcda273"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/03_Учёт выполненных работ",
+    "type": "dir",
+    "name": "03_Учёт выполненных работ",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:aadec31452b14e33b077c96d23337e4ea386f140d12340068d886bd80d2a8055"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт",
+    "type": "dir",
+    "name": "01_Капитальный ремонт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:ca494c395f9b4fafaf0147b4a686e088d85f7865f66b4017b7c3335a6d9940c3"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт",
+    "type": "dir",
+    "name": "02_Текущий ремонт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:f186c47cc8ad476091fee187fe66b3303c202decfc8e437a981db3e3a4ad6683"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/03_Техническая эксплуатация и обслуживание",
+    "type": "dir",
+    "name": "03_Техническая эксплуатация и обслуживание",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:465a91d6a5524be6add5606aae89fa5ad25308db1f6f4f568153505c063ed3f1"
+  },
+  {
+    "path": "/01_Москва/06_Снос/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:475e633e408743dfb86d81e30e1ec50d5b3591819d4e48a1bfd69d53e2b2c283"
+  },
+  {
+    "path": "/01_Москва/06_Снос/02_Расчёт смет на работы по обследованию",
+    "type": "dir",
+    "name": "02_Расчёт смет на работы по обследованию",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:5a74948c559a4f8da674c2b00c6b5b06dc49c16e2f024e97900bc1fdf38d58f6"
+  },
+  {
+    "path": "/01_Москва/06_Снос/03_Дефектная ведомость",
+    "type": "dir",
+    "name": "03_Дефектная ведомость",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:af3a45711b0b4c33bfacde7c77c05b1ae0428e62ce094e57b959b1e72f3d82f3"
+  },
+  {
+    "path": "/01_Москва/06_Снос/04_Локальная смета",
+    "type": "dir",
+    "name": "04_Локальная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:5b1890cbc8e846969df56d8f2a5c39d3ee7fe4310cf84c919c9aee91e9730ce1"
+  },
+  {
+    "path": "/01_Москва/06_Снос/05_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "05_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:e7646444b5c241d39c78f50d783409fc325641be3ecc48b9997ea657a4abe9f0"
+  },
+  {
+    "path": "/01_Москва/06_Снос/06_Объектная смета",
+    "type": "dir",
+    "name": "06_Объектная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:1f682c8d6a844c6fa2ba71f7b9f22162e17ecd46126245e9a967c3159a769a02"
+  },
+  {
+    "path": "/01_Москва/06_Снос/07_Сводный сметный расчёт",
+    "type": "dir",
+    "name": "07_Сводный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:73610a8cb6084bd3b59427f921c3ad506b5660a9ae6e4add89e170f594e81946"
+  },
+  {
+    "path": "/01_Москва/06_Снос/08_Пояснительная записка",
+    "type": "dir",
+    "name": "08_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:64649dc7020a4a0494128239b21e397dd54d459b3d4e46faa333357c265c6b0b"
+  },
+  {
+    "path": "/01_Москва/Нормативно-техническая документация/1_Лекция_4.pdf",
+    "type": "file",
+    "name": "1_Лекция_4.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 3104976,
+    "resource_id": "1917309068:78e6c8616c64eaadee553f46874affca59bdf8d36f6c883a573c29363e80bf77"
+  },
+  {
+    "path": "/01_Москва/Нормативно-техническая документация/ОБЗОР МЕТОДИК.docx",
+    "type": "file",
+    "name": "ОБЗОР МЕТОДИК.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 30890,
+    "resource_id": "1917309068:d7b295414d525c857c6c8ea79af4ca89266b2ac72132038e4603d8d5e43c7fa7"
+  },
+  {
+    "path": "/02_Регионы/01_Предпроектная стадия/01_НЦС",
+    "type": "dir",
+    "name": "01_НЦС",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:859ab03ee2f34876bbb89d0c905376d310b52bda4322486794c0d33b6af7e3c0"
+  },
+  {
+    "path": "/02_Регионы/01_Предпроектная стадия/02_Объекты-аналоги",
+    "type": "dir",
+    "name": "02_Объекты-аналоги",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:65de6264a27e4c6d9c9cb739f6f95e4ff39e75a11d9441538e60a3f29d4838ce"
+  },
+  {
+    "path": "/02_Регионы/01_Предпроектная стадия/1_Лекция_1.pdf",
+    "type": "file",
+    "name": "1_Лекция_1.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 1975355,
+    "resource_id": "1917309068:a6370173e71e046e1f4a2760c70d3910aa71e5ad9a1da100172282da5f3ebee6"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы",
+    "type": "dir",
+    "name": "Сметы на проектные и изыскательсике работы",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:464307531a03c9f950c7aaf590b652c8b8a462b4a78c32f4d1fe6b3799079264"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П",
+    "type": "dir",
+    "name": "01_Стадия П",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:4e1d7d147ebb452dbbb010a63fdede1dd673eaeb288d448bb47d6e669cb56518"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р",
+    "type": "dir",
+    "name": "02_Стадия Р",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:8b16a0092ad244cbb7748505124f55f36174c37caf544180859faad277bb58ef"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/03_Исполнительная смета",
+    "type": "dir",
+    "name": "03_Исполнительная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:e648c9444bef4014a42052a417d60acda8c6b28666fd47bea648fcda98d2fc18"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/04_Проверка достоверности сметной стоимости",
+    "type": "dir",
+    "name": "04_Проверка достоверности сметной стоимости",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:1283339eb2ca497699f696814a10e831b67e9c59ebe7498e9cd62f70007fc955"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/01_НМЦК",
+    "type": "dir",
+    "name": "01_НМЦК",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:0be17d31b67e43a1b5485f9f14e27273e02c18d84c4147af825bace41fe8c6c5"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/02_Смета контракта",
+    "type": "dir",
+    "name": "02_Смета контракта",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:31184661b0054e70923bab5b3ebf507c02ada8f971fa462d82ab013147bf67d9"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/03_Учёт выполненных работ",
+    "type": "dir",
+    "name": "03_Учёт выполненных работ",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:181a5efa1bc64da9ab49ab5fc3fedd50e61da0bffdb3403f83247a40975fa8a5"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт",
+    "type": "dir",
+    "name": "01_Капитальный ремонт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:d4a1dfc257554209af9842e1b800bf01014d371d0dfb41e98734138f7e113c1b"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт",
+    "type": "dir",
+    "name": "02_Текущий ремонт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:28e9733dc5824f41b87b716635f41bc9f6b4736a8f5c435f82a21bc991167271"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/03_Техническая эксплуатация и обслуживание",
+    "type": "dir",
+    "name": "03_Техническая эксплуатация и обслуживание",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:5a9e4a6a23df40dbac9661fdcffccf7326c6cdb660914497b51b5e649c2d4b51"
+  },
+  {
+    "path": "/02_Регионы/06_Снос/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:f9b9fe664e474b09a59f89125f9c340526b0813941174dadb53e7553931ad068"
+  },
+  {
+    "path": "/02_Регионы/06_Снос/02_Расчёт смет на работы по обследованию",
+    "type": "dir",
+    "name": "02_Расчёт смет на работы по обследованию",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:7a9b08c490934e96a4c83baee96a0d06e8f8352401e343578bb2ffedf09eac88"
+  },
+  {
+    "path": "/02_Регионы/06_Снос/03_Дефектная ведомость",
+    "type": "dir",
+    "name": "03_Дефектная ведомость",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:cdf71f7066bf4eb294fd1a1a64be649310513d38b729467d8776d42ca2e9e59e"
+  },
+  {
+    "path": "/02_Регионы/06_Снос/04_Локальная смета",
+    "type": "dir",
+    "name": "04_Локальная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:c11949f2897e4255b083f9150e4afa55d745188ca1904794aae95888da20f18a"
+  },
+  {
+    "path": "/02_Регионы/06_Снос/05_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "05_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:3893072fab364a35ab1f6d85756cf5fd2ed5ad8c191842eaa034be3584ed3b3f"
+  },
+  {
+    "path": "/02_Регионы/06_Снос/06_Объектная смета",
+    "type": "dir",
+    "name": "06_Объектная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:819ccf2750c64a19835f59f0b186a9bf1ff0e4a3c28b44adbd53484ea9b1da4e"
+  },
+  {
+    "path": "/02_Регионы/06_Снос/07_Сводный сметный расчёт",
+    "type": "dir",
+    "name": "07_Сводный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:33378e7d23e6409e9fe553d0a2f83a7bc34996e8626045bf956e5643ad763488"
+  },
+  {
+    "path": "/02_Регионы/06_Снос/08_Пояснительная записка",
+    "type": "dir",
+    "name": "08_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:488b891015c2459692dfc6c82e29fc9074b11ca340964ed9ba20837fec594dbc"
+  },
+  {
+    "path": "/02_Регионы/Нормативно-техническая документация/1_Лекция_4.pdf",
+    "type": "file",
+    "name": "1_Лекция_4.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 3104976,
+    "resource_id": "1917309068:5a3eb52ae9ef07e17c4221d80e054e229dfbde9e9ca74cf7798b728e022b8f7f"
+  },
+  {
+    "path": "/02_Регионы/Нормативно-техническая документация/ОБЗОР МЕТОДИК.docx",
+    "type": "file",
+    "name": "ОБЗОР МЕТОДИК.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 30890,
+    "resource_id": "1917309068:6991b984cf39e4ad5fd664d23d459e02631c88af5a6c1c2c96e1fd9602ee5cea"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Мини-тренажер",
+    "type": "dir",
+    "name": "Мини-тренажер",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:48f4d769c39a251acc19bb00a104e78af31a1dd04a6d8efa353b2a885eca5111"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 1.1. Требования законодательства РФ к ценообразованию ПИР.docx",
+    "type": "file",
+    "name": "Тема 1.1. Требования законодательства РФ к ценообразованию ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1961929,
+    "resource_id": "1917309068:7c497f0f7a45dd131f81e0644efaa184041be25a44097bebce723e659a5326c5"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 1.2. Обзор изменений нормативно-правовых и методических документов по ценообразованию ПИР.docx",
+    "type": "file",
+    "name": "Тема 1.2. Обзор изменений нормативно-правовых и методических документов по ценообразованию ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958657,
+    "resource_id": "1917309068:719fb739fe7a7c88383b09c36b39d7f3b1f9ceb06918149c37ab996190e9d266"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 2. Нормативно-правовые требования для составления сметной документации на ПИР.docx",
+    "type": "file",
+    "name": "Тема 2. Нормативно-правовые требования для составления сметной документации на ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958023,
+    "resource_id": "1917309068:a6823fff8319de618376bedc198787403cf1f5990c07dbce79ad6d2756a5c17d"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 3. Нормативная база для определения стоимости ПИР.docx",
+    "type": "file",
+    "name": "Тема 3. Нормативная база для определения стоимости ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1963756,
+    "resource_id": "1917309068:d17750be1987c5afed4f74530ecc10d6db7d92696c2348c6d7ebeabe444da8d6"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 4. Актуальная система ценообразования и сметного нормирования ПИР в РФ.docx",
+    "type": "file",
+    "name": "Тема 4. Актуальная система ценообразования и сметного нормирования ПИР в РФ.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1964307,
+    "resource_id": "1917309068:14942ec45a4caf3519f15b49482b9481fba5b66901e61a1e1e614e5693893f1f"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 5. Базовый и текущий уровень цен.docx",
+    "type": "file",
+    "name": "Тема 5. Базовый и текущий уровень цен.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1961912,
+    "resource_id": "1917309068:7c0672bdee7d739b570916a070676c75179bd3048715f1342cd1c6bcee136240"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 6. Применение поправочных коэффициентов.docx",
+    "type": "file",
+    "name": "Тема 6. Применение поправочных коэффициентов.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1964168,
+    "resource_id": "1917309068:d8fc61e98a44c857dfa6971fbc538dc97c920bbfc6f46b6f178d72a88f0da162"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 7. Основные способы расчёта сметной стоимости ПИР.docx",
+    "type": "file",
+    "name": "Тема 7. Основные способы расчёта сметной стоимости ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1966934,
+    "resource_id": "1917309068:3d36e7983663e962f02a214c34c9e58c048832df125c974a1a7aead06ea22d04"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Тема 8. Составление смет по специализированным справочникам базовых цен.docx",
+    "type": "file",
+    "name": "Тема 8. Составление смет по специализированным справочникам базовых цен.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1962826,
+    "resource_id": "1917309068:b4aa921e031ae63625a31a0cc8d598f803c969ad68bdf3fd52f1f04d5e2fd629"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:1d131580b9444ce8bd8ec1a50a5ff59690524f2002ef43e9b558b74efdd6f3fa"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П/02_ВОР",
+    "type": "dir",
+    "name": "02_ВОР",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:d18229a2bab14bd0b29a3b4e3038735f9b8f4cf5cd2740d1b9df9dca35a110ce"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт",
+    "type": "dir",
+    "name": "03_Локальный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:603b6f1ea65348b5b981e3298f432e6b50e94b92c49c4f2cb93209a652d1a1f8"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П/04_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "04_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:9d5d1f2abd964a0ab7655ef43a439fef83bbaa10b76c4bcf8138cf38c2dbe045"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П/05_Объектный сметный расчёт",
+    "type": "dir",
+    "name": "05_Объектный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:60df9a2059f14e2b92708198f969246647d60f6771b2467a8e098d26ebc2cb66"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П/06_Сводный сметный расчёт",
+    "type": "dir",
+    "name": "06_Сводный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:7830fee61b9a40bcab1a5714e82432b9b7bd534ba48d4f4691bba3a7765d6fcf"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П/07_Сводка затрат",
+    "type": "dir",
+    "name": "07_Сводка затрат",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:aec19fd88ee34c799792a05a14a4089c6fdc693dcf9d4c408864b956a2840232"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/01_Стадия П/08_Пояснительная записка",
+    "type": "dir",
+    "name": "08_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:4f795bb0a7124483ba5ed43e176efe0d7c6aeed503ce43648f02b15e7e8f298d"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:cef442b741bc4ff7aebcd1f88d23065325d31db25c8e4cb1a1349300c810586c"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р/02_ВОР",
+    "type": "dir",
+    "name": "02_ВОР",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:2dae2e12bfcb4c64b03286fe58ea16ca813dc8e92da84372896a56a2da2a925a"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р/03_Локальная смета",
+    "type": "dir",
+    "name": "03_Локальная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:c8612ed114b445c5980a5036fd14fb628c49d549b169451cace7fcf142c4f797"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р/04_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "04_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:ca3e99442f7d4f20bb9058f621efb3427be3be364b6145c691eef59590f1bef1"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р/05_Объектная смета",
+    "type": "dir",
+    "name": "05_Объектная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:bb2002c3e7be4065beba361cca1b42efdfe427b0515d4e778ccb4aca003d58ce"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р/06_Сводный сметный расчёт",
+    "type": "dir",
+    "name": "06_Сводный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:81d03680ab7e453a9e179f482f9b9123a0cee35e86ff4100be48a81e58a14866"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р/07_Сводка затрат",
+    "type": "dir",
+    "name": "07_Сводка затрат",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:76b8a4de05344714aa1f6d9e98020e37fd6cab5cde5841ba81de2bc7a9cbba1c"
+  },
+  {
+    "path": "/01_Москва/03_Проектная стадия/02_Стадия Р/08_Пояснительная записка",
+    "type": "dir",
+    "name": "08_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:f2697bb32f0b4c00939b8f9508b8d55ef5b597460f8546fcb980324b726a0e19"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/02_Смета контракта/01_Ведомость конструктивных элементов",
+    "type": "dir",
+    "name": "01_Ведомость конструктивных элементов",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:c3b18d251d5f4597a035657367149279930f9216bbdf46c1a268ace87c54dbb2"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/02_Смета контракта/02_Проект сметы контракта",
+    "type": "dir",
+    "name": "02_Проект сметы контракта",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:197712736f2048c4a3cd3a1d4b4365d043ecb97f8a7c468185147111bed1ebce"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/02_Смета контракта/03_Смета контракта",
+    "type": "dir",
+    "name": "03_Смета контракта",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:6eca7859553c4f919cca3e0bc8e38dae7e5e5b23d9b145e3becad4d91213898a"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/03_Учёт выполненных работ/01_КС-2",
+    "type": "dir",
+    "name": "01_КС-2",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:e3e0146b7e334f41952f55f2ce7f29fe114ff359fd7c49eb8ff58b20cc633706"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/03_Учёт выполненных работ/02_КС-3",
+    "type": "dir",
+    "name": "02_КС-3",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:afce5a2841a6402fa6962639dc87b4e64b76605a52bd44a197075db0a1225468"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/03_Учёт выполненных работ/03_КС-6а",
+    "type": "dir",
+    "name": "03_КС-6а",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:a3b9f679596844d9a45308e9a3de7b2032feced0472b4c3dabd64b704439f464"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/03_Учёт выполненных работ/04_М-29",
+    "type": "dir",
+    "name": "04_М-29",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:ccd06ebfec994ca99cbb7277b084ba07c6ce488297ec44788d40318c1435a2bc"
+  },
+  {
+    "path": "/01_Москва/04_Стадия строительства/03_Учёт выполненных работ/05_М-15",
+    "type": "dir",
+    "name": "05_М-15",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:03e55186c87042ca9ebd48cd637d770987688f243b6d4a90b602ebdeb467689c"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:bef857c3ac604f9e9f6376716f46d5948c6725d40a4a412dbde57bc1280be05a"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/02_Расчёт смет на работы по обследованию",
+    "type": "dir",
+    "name": "02_Расчёт смет на работы по обследованию",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:0b55cf01df514e348022255d1459fddd61d2746d0c9e44fdbb82646583b03472"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/03_Дефектная ведомость",
+    "type": "dir",
+    "name": "03_Дефектная ведомость",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:956bc675519e4acc8360bf667927723525d31443310b4ea8b009f276ce0ae29b"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/04_Локальная смета",
+    "type": "dir",
+    "name": "04_Локальная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:caa1d16381b34cceae024c19310c65301a817511db824673ad2524d4969c9d02"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/05_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "05_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:54285f96732345b3ad20637b60b975b2a0272327d606441e8db9d79126ac3847"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/06_Объектная смета",
+    "type": "dir",
+    "name": "06_Объектная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:72bc2d9d01344a35ab1fbf2a8fc75f69e165398b62414462955078e54ba12b42"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/07_Сводный сметный расчёт",
+    "type": "dir",
+    "name": "07_Сводный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:bb5679015ef74682b12aaa00808adcb67cfdcda25ec84d35bd8540e982f8c5b7"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/08_Пояснительная записка",
+    "type": "dir",
+    "name": "08_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:ede4fa39da854a21a748fc16e22580072c1040948d9648199c709bf0ca833fd1"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:c0f9dcfae0ec4560b3a1edbdec97862e5f06d3e62715449b94e46b18f7b98163"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/02_Дефектная ведомость или акт",
+    "type": "dir",
+    "name": "02_Дефектная ведомость или акт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:cc246c6b65b8477995287b9ab4906dda9b4dc1250c0f421c830fb4df20795f9b"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/03_Локальная смета",
+    "type": "dir",
+    "name": "03_Локальная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:f3fc67cafb46400586b16dca2a652c979a96352047f646d3b6f6269c534b85a6"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/04_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "04_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:c406ea3a35314cc28755ab313b553033b115f90fcfd44b41b686335f8b054f7d"
+  },
+  {
+    "path": "/01_Москва/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/05_Пояснительная записка",
+    "type": "dir",
+    "name": "05_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:7bb5981dbf544975a9f4c6a1511ba2c6fd6632b7bd4242b085b11eca24cd3ac7"
+  },
+  {
+    "path": "/02_Регионы/01_Предпроектная стадия/01_НЦС/Модуль 11.docx",
+    "type": "file",
+    "name": "Модуль 11.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 11950587,
+    "resource_id": "1917309068:6e6e04286a46f0c0ce594cf360be176e379d04a6c933eb26f036a5d323013b0a"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Мини-тренажер",
+    "type": "dir",
+    "name": "Мини-тренажер",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:bec8bfe3936e76201114734219e96d0d4608c6f50f79e5ba6a46d19bd2012c49"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 1.1. Требования законодательства РФ к ценообразованию ПИР.docx",
+    "type": "file",
+    "name": "Тема 1.1. Требования законодательства РФ к ценообразованию ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1961929,
+    "resource_id": "1917309068:0be77631b5dd131ec925d0b788b90ac20ccead10b194bb026dd22910a30d0631"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 1.2. Обзор изменений нормативно-правовых и методических документов по ценообразованию ПИР.docx",
+    "type": "file",
+    "name": "Тема 1.2. Обзор изменений нормативно-правовых и методических документов по ценообразованию ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958657,
+    "resource_id": "1917309068:60ad317de9034ec052c403dc039e05168356c84a9b5ba6abd3a1590a7c3ce4e0"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 2. Нормативно-правовые требования для составления сметной документации на ПИР.docx",
+    "type": "file",
+    "name": "Тема 2. Нормативно-правовые требования для составления сметной документации на ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958023,
+    "resource_id": "1917309068:fea013ceb3c9289eac1218a277a27065f26b35282240b843f000f9748bc5b00a"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 3. Нормативная база для определения стоимости ПИР.docx",
+    "type": "file",
+    "name": "Тема 3. Нормативная база для определения стоимости ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1963756,
+    "resource_id": "1917309068:cf8f48614b0d215119afe53cef2ffbc27ea353a539156592140d4fe940732370"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 4. Актуальная система ценообразования и сметного нормирования ПИР в РФ.docx",
+    "type": "file",
+    "name": "Тема 4. Актуальная система ценообразования и сметного нормирования ПИР в РФ.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1964307,
+    "resource_id": "1917309068:66e0a357ddc616410fa78f3a1b5f032954fcdd425bdb10a130c123e217df23a9"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 5. Базовый и текущий уровень цен.docx",
+    "type": "file",
+    "name": "Тема 5. Базовый и текущий уровень цен.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1961912,
+    "resource_id": "1917309068:a8b4a21f81f4cd0ae1ee70ffc9a3aaee8c7489d262a7492d5cadac124e5a3ecf"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 6. Применение поправочных коэффициентов.docx",
+    "type": "file",
+    "name": "Тема 6. Применение поправочных коэффициентов.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1964168,
+    "resource_id": "1917309068:b8e3b45acc32fb5e86c0bbf106ead91d79847f4fc42754a6f51897195d6915c2"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 7. Основные способы расчёта сметной стоимости ПИР.docx",
+    "type": "file",
+    "name": "Тема 7. Основные способы расчёта сметной стоимости ПИР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1966934,
+    "resource_id": "1917309068:3bbc307ab1604b937ed292e32c144840333000830bb581282e64b3ba4affc337"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Тема 8. Составление смет по специализированным справочникам базовых цен.docx",
+    "type": "file",
+    "name": "Тема 8. Составление смет по специализированным справочникам базовых цен.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1962826,
+    "resource_id": "1917309068:1899b7384d3fd1e142c8446ead50ce921021dc0d7d5515830b07b5f568f840d2"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:e2044a25eba6464598cf2dd9c44290324d49ac2bae4e429a8c2def0b4607fbb1"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР",
+    "type": "dir",
+    "name": "02_ВОР",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:5a20114285884aa5b43a57b01edb9c34fc8b36f8c3c94ca1926c49b39975a291"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт",
+    "type": "dir",
+    "name": "03_Локальный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:ee200c45892a470c8f446826af3c7f250dc2cacc4ca449558ebfc50cb06f64e9"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/04_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "04_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:735c07252f1d466083cae02947eed8e0c95b2ef06b974629b033ac1069194fbd"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/05_Объектный сметный расчёт",
+    "type": "dir",
+    "name": "05_Объектный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:4e05fa19703f4275a996354e75d6e7fc34c7debdde2045389f86c22927e12666"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/06_Сводный сметный расчёт",
+    "type": "dir",
+    "name": "06_Сводный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:81edf2531e5f4274837c2f13e501afb22662ff931c0c4c1dbba58bc7897e203e"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/07_Сводка затрат",
+    "type": "dir",
+    "name": "07_Сводка затрат",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:dda2c3c98db5435a87c9f6fb0dcbbba7f5b3bcfc8f8a4ae7b10613230db7778f"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/08_Пояснительная записка",
+    "type": "dir",
+    "name": "08_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:53d48a4648fa4e259a889055ca49cb6738e96b5ea2f74e0db8c440f4e837468b"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:469de1d7e18640c0bec9b367e797a8f9af6511192a1c4ef686e2cc993113a3a5"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/02_ВОР",
+    "type": "dir",
+    "name": "02_ВОР",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:4cc6c712472347d79aaf1efac8eb72afe6726c088b1746c298756eed793377bc"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/03_Локальная смета",
+    "type": "dir",
+    "name": "03_Локальная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:a0cf77d5bef64c3394c8c06662215235f0f7538f461a43c182d3e8127998fe23"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/04_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "04_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:f0f19466f5e74884957d090fe892bded439a5799997a4789ae366b8aaa0c50a2"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/05_Объектная смета",
+    "type": "dir",
+    "name": "05_Объектная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:6c7e6c1c618d4ec6b957f09f4015ea66f46bd28161a14c529bcb0c71349da01b"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/06_Сводный сметный расчёт",
+    "type": "dir",
+    "name": "06_Сводный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:26c3de64b7944fc0bfb38c3c47e88eadfbfd551ff0bc4c4b90b811157c8c3880"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/07_Сводка затрат",
+    "type": "dir",
+    "name": "07_Сводка затрат",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:fdcb04dc9424431abded57ceacdcc4b4bd03658c5a124be8b07095dd7f448c4b"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/08_Пояснительная записка",
+    "type": "dir",
+    "name": "08_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:ddbb39cd1e3c42eba4170d43912604683d840eac3a9a4bd6bf40a226724451e3"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/03_Исполнительная смета/Модуль 9. Приложение 1.pdf",
+    "type": "file",
+    "name": "Модуль 9. Приложение 1.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 2699965,
+    "resource_id": "1917309068:2151deef96d0c6cbb7885a0a77b589abaed2d4277ecb2c35deadc22de1e70b39"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/03_Исполнительная смета/Модуль 9.docx",
+    "type": "file",
+    "name": "Модуль 9.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 14788954,
+    "resource_id": "1917309068:de8b5b9cb49f557541d286878f996455fdf929125a26a089db26102d1d25f46c"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/04_Проверка достоверности сметной стоимости/Модуль 12.docx",
+    "type": "file",
+    "name": "Модуль 12.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 8192908,
+    "resource_id": "1917309068:f8ad445cae52a7319fa50fa217c2e7e2b99edd55c2db6148278f6e6e5b6fe33c"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/01_НМЦК/Модуль 13.docx",
+    "type": "file",
+    "name": "Модуль 13.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 2502627,
+    "resource_id": "1917309068:c8fa7b7d93102069efe5cc0dc91d76b4de3d47c5f79d0fe7640225b1803aaeb3"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/02_Смета контракта/01_Ведомость конструктивных элементов",
+    "type": "dir",
+    "name": "01_Ведомость конструктивных элементов",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:a6a9de0c6685497b9db03cd53d6f5a71d3da7303b81c477d89964ec529b787d8"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/02_Смета контракта/02_Проект сметы контракта",
+    "type": "dir",
+    "name": "02_Проект сметы контракта",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:6245f7b2629a43ddb404cfed89460abccec1c85a2722479c9410a7d0b8ba6cbb"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/02_Смета контракта/03_Смета контракта",
+    "type": "dir",
+    "name": "03_Смета контракта",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:cd06cc833aa94695821d22641bbbc237d9c4919fb2874931bc0213d29f7d0a1d"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/03_Учёт выполненных работ/01_КС-2",
+    "type": "dir",
+    "name": "01_КС-2",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:8bee5b0ad82e49d79291d8b08a8b16c2bdac759f60104664b8e1f638a53ad115"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/03_Учёт выполненных работ/02_КС-3",
+    "type": "dir",
+    "name": "02_КС-3",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:d988b667670146c09a18cdd4b619696f2b9ae2b9378242c1aadfc47086edfa7a"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/03_Учёт выполненных работ/03_КС-6а",
+    "type": "dir",
+    "name": "03_КС-6а",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:fa0f7c2467434c24a6ba1788c1ccf6a609c63669a15a43a1957b1b2352e2f97e"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/03_Учёт выполненных работ/04_М-29",
+    "type": "dir",
+    "name": "04_М-29",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:8fe8cde7d36845f693fd41466a01eb75a051a19e444b4370870dad1d6d2f8acc"
+  },
+  {
+    "path": "/02_Регионы/04_Стадия строительства/03_Учёт выполненных работ/05_М-15",
+    "type": "dir",
+    "name": "05_М-15",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:b83ec6e8272f4047862202a44910b7e81e297916f11640b2b8a5486eb23e7003"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:10bb6eb0606348079acb70ad17da39f16516337931d5425fadb39b9f9a58beaf"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/02_Расчёт смет на работы по обследованию",
+    "type": "dir",
+    "name": "02_Расчёт смет на работы по обследованию",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:f2cd5d09b1fb433f8688278a4f49be9ea60f3bb359064ccb9aae90aaec0564d4"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/03_Дефектная ведомость",
+    "type": "dir",
+    "name": "03_Дефектная ведомость",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:366fb98967e043eca0ec1bc917592b7823bf8c7bdb394a7d910b7d68eb4b9c78"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/04_Локальная смета",
+    "type": "dir",
+    "name": "04_Локальная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:dcc78f9d0b304e4097ba7e94ea8e4914d959e7149e024b6abc12a57020b7c8ec"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/05_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "05_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:75be9cead68f438f81ff1809623bdd474cff0a4e8ac3453b85dd72b8e14089d2"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/06_Объектная смета",
+    "type": "dir",
+    "name": "06_Объектная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:9b605367e3af417e8f30811aeca02bb25ed755a15adb4fd0bd0999023cf4bca2"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/07_Сводный сметный расчёт",
+    "type": "dir",
+    "name": "07_Сводный сметный расчёт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:bb963e7650b74b26ae82b72f7a33e9c03e4e2d03f35c40db99b5a4e20b2be679"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/08_Пояснительная записка",
+    "type": "dir",
+    "name": "08_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:efd035fd82664c28b910b1615be2bdaeffcfa43f0d114a87ada669c265328cdd"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/01_Сбор и анализ исходных данных",
+    "type": "dir",
+    "name": "01_Сбор и анализ исходных данных",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:5a438291da5146a9bdea562b16753f7f46e6b3346dda46c08481305278188508"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/02_Дефектная ведомость или акт",
+    "type": "dir",
+    "name": "02_Дефектная ведомость или акт",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:8309533158e84fb29bbc713f30193a4ed9849ffe68fd486eafb753b2804ed080"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/03_Локальная смета",
+    "type": "dir",
+    "name": "03_Локальная смета",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:04c49ab0da254f1f8ad78a53876954aa90c02c8318b84c94b6b7d6ed8834dce9"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/04_Конъюнктурный анализ цен",
+    "type": "dir",
+    "name": "04_Конъюнктурный анализ цен",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:b2190d003b1042f9be658185fb2114424cd2e6e06d804d2e89120101a6cfafe3"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/02_Текущий ремонт/05_Пояснительная записка",
+    "type": "dir",
+    "name": "05_Пояснительная записка",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:59beda383770437fb7a60f33af0dc51eaea457f7044041deb5ee6eff681b5ad6"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Мини-тренажер/Практическое задание № 1. Расчет стоимости изысканий ресурсным методом.docx",
+    "type": "file",
+    "name": "Практическое задание № 1. Расчет стоимости изысканий ресурсным методом.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958500,
+    "resource_id": "1917309068:da760989d40a9011d024afa6442d51c2b6ed60c977d5d6f893133b2df98d0858"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Мини-тренажер/Практическое задание № 2. Расчет стоимости проектных работ параметрическим методом.docx",
+    "type": "file",
+    "name": "Практическое задание № 2. Расчет стоимости проектных работ параметрическим методом.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958532,
+    "resource_id": "1917309068:541b37285da8dcd3df05df184aa18ca2ca23e67d666e04ae17fb8152ef3b5842"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Мини-тренажер/Практическое задание № 3. Анализ фрагмента сметной документации.docx",
+    "type": "file",
+    "name": "Практическое задание № 3. Анализ фрагмента сметной документации.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958114,
+    "resource_id": "1917309068:e6e9d959db637d604e209173141188f9c788ab6369d66278bfb52bbc9a6acde9"
+  },
+  {
+    "path": "/01_Москва/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательские работы/Мини-тренажер/Практическое задание № 4. Экспертиза сметы по специализированному СБЦ.docx",
+    "type": "file",
+    "name": "Практическое задание № 4. Экспертиза сметы по специализированному СБЦ.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1959693,
+    "resource_id": "1917309068:97435e07cac6c8e7db175aab4ba19a0aaaa7d326a2f736d28f9a0976b0c17aa4"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Мини-тренажер/Практическое задание № 1. Расчет стоимости изысканий ресурсным методом.docx",
+    "type": "file",
+    "name": "Практическое задание № 1. Расчет стоимости изысканий ресурсным методом.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958500,
+    "resource_id": "1917309068:243d943e71e68cdf4f17e63dea689dce63d14e213846fe853a4446642d9c4c54"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Мини-тренажер/Практическое задание № 2. Расчет стоимости проектных работ параметрическим методом.docx",
+    "type": "file",
+    "name": "Практическое задание № 2. Расчет стоимости проектных работ параметрическим методом.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958532,
+    "resource_id": "1917309068:725116852e7a6aee300c5f5d3d3add97b4e1c6cfee05756cc9beddb03e37d1ed"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Мини-тренажер/Практическое задание № 3. Анализ фрагмента сметной документации.docx",
+    "type": "file",
+    "name": "Практическое задание № 3. Анализ фрагмента сметной документации.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1958114,
+    "resource_id": "1917309068:c3c459c348f3cb51fd4006454eb9c4959b404478292cc0c0b9824da4626dae5b"
+  },
+  {
+    "path": "/02_Регионы/02_Инженерные изыскания и проектные работы/Сметы на проектные и изыскательсике работы/Мини-тренажер/Практическое задание № 4. Экспертиза сметы по специализированному СБЦ.docx",
+    "type": "file",
+    "name": "Практическое задание № 4. Экспертиза сметы по специализированному СБЦ.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1959693,
+    "resource_id": "1917309068:5a8385820f41c14991b5393ca2e3b52486d15ad2c97d3d630e1e85306b4cbee5"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/01_Сбор и анализ исходных данных/1_Лекция_2.pdf",
+    "type": "file",
+    "name": "1_Лекция_2.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 3577602,
+    "resource_id": "1917309068:b2c3fd69db65b2ce808f45b92e30be226f1abf274ca850cde0966b495bf743de"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/01_Сбор и анализ исходных данных/Модуль 16.docx",
+    "type": "file",
+    "name": "Модуль 16.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1034038,
+    "resource_id": "1917309068:8f4fdfe465b184798b87722530fe7f638b6d43123469edeb0c8b03a94f76656a"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Мини-тренажер",
+    "type": "dir",
+    "name": "Мини-тренажер",
+    "public_url": null,
+    "mime_type": null,
+    "size": null,
+    "resource_id": "1917309068:2825f14187a58bacbaac6050a8824de1d199f35c68c15b1d01de9198b0805f17"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/1_Лекция_3.pdf",
+    "type": "file",
+    "name": "1_Лекция_3.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 6193635,
+    "resource_id": "1917309068:d43e18c3994f493c5f6ec1961746ea44c371e90d742a15f8091cdd48c55cde31"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Rekomendacii-k-VOR.pdf",
+    "type": "file",
+    "name": "Rekomendacii-k-VOR.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 507849,
+    "resource_id": "1917309068:ca9dc4429fd1f6c881292d3c332d657be88a0f273aa23b2b632fabbbad24dd8b"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Rekomendatsii-po-oformleniyu-vedomosti-obemov-rabot.docx",
+    "type": "file",
+    "name": "Rekomendatsii-po-oformleniyu-vedomosti-obemov-rabot.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 29422,
+    "resource_id": "1917309068:9f0baf61a34442921db40fc214fdd9733b3bb8816973f2c6dbf4d5a84bbdcf52"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Spravochnik_inzhenera-stroitelya_t-1.pdf",
+    "type": "file",
+    "name": "Spravochnik_inzhenera-stroitelya_t-1.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 31190311,
+    "resource_id": "1917309068:32a6f793db2cde66a8bdbc0f2feaad795218c7fb6111d367c89e0fa5390d419d"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/kozuhina-a.pdf",
+    "type": "file",
+    "name": "kozuhina-a.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 216612,
+    "resource_id": "1917309068:8508c71f780ae2aa283cde9835652364a7eafee58b153b85b7399d143df61130"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/pravila-podschyotov-obyomov-rabot-v-stroitelstve.pdf",
+    "type": "file",
+    "name": "pravila-podschyotov-obyomov-rabot-v-stroitelstve.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 929912,
+    "resource_id": "1917309068:9c9c28de933fa468454a06129639454c9342599b9fa0555336300e6a176d8e95"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Лекция_29.05.pptx",
+    "type": "file",
+    "name": "Лекция_29.05.pptx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "size": 20926734,
+    "resource_id": "1917309068:de0f6f3af3b75dadf5a702d87a8976e88ae6b892f6e2141accb7870205aadbd4"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Лекция_Объемы работ.pdf",
+    "type": "file",
+    "name": "Лекция_Объемы работ.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 10652804,
+    "resource_id": "1917309068:dd89198aba62f52b4f7be4f9bc426b97d221a63609196fabd687743faa8262c4"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Объемы работ.pdf",
+    "type": "file",
+    "name": "Объемы работ.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 3814679,
+    "resource_id": "1917309068:515afdac63c814b667f264e98f069c2de4d2fe06e32f74c9c7ef7a4dc7ec53b3"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Объемы работ.pptx",
+    "type": "file",
+    "name": "Объемы работ.pptx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "size": 20625950,
+    "resource_id": "1917309068:d8ae840aa07f51172c72578a2334db250bc5b22bfe838fd9100d25d8a4441e80"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Определение-объемов-строительных-работ.pdf",
+    "type": "file",
+    "name": "Определение-объемов-строительных-работ.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 2778569,
+    "resource_id": "1917309068:f8dd528565d79f5407577907ae5b0c7527cf2930d3585c67a504a113d71050ac"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Приказ _ВОР_Москва.pdf",
+    "type": "file",
+    "name": "Приказ _ВОР_Москва.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 6486109,
+    "resource_id": "1917309068:12bf3a6242a6b8a0e278e015ae2fc9562806fafbc012be33d538b921ff57a8d1"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/1_Лекция_5.pdf",
+    "type": "file",
+    "name": "1_Лекция_5.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 3057926,
+    "resource_id": "1917309068:ffc89e57639361c1eb4d38b8584f8757379912bd59e5a81149e1de2d3a9de1f4"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/1_Лекция_6.pdf",
+    "type": "file",
+    "name": "1_Лекция_6.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 1986483,
+    "resource_id": "1917309068:f3f7f3b87eb63e2b9cb11483835040c4502fb1de47306be46a86ddea7c317335"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/1_Лекция_6.pptx.pdf",
+    "type": "file",
+    "name": "1_Лекция_6.pptx.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 1939308,
+    "resource_id": "1917309068:903aa865fa08ab72c870bfc56b0c5c43745c285df852e6a849f5a19017291732"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/1_Лекция_7.pdf",
+    "type": "file",
+    "name": "1_Лекция_7.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 1970344,
+    "resource_id": "1917309068:823bd5e7175d9097da38e8bf842e590b229fae8fa6f36b517efe959bac240575"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/1_Лекция_8.pdf",
+    "type": "file",
+    "name": "1_Лекция_8.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 4995031,
+    "resource_id": "1917309068:5d0df1b75ceae4e874c5228fd03a0667aaca6fa36236b280df384d3556c5a352"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 1.docx",
+    "type": "file",
+    "name": "Модуль 1.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 997290,
+    "resource_id": "1917309068:1fbc469119a9efb8e02eeb231971d2d4cbd3e22638fa65232f704cf9a21dde42"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 10 Пример ЛС_РИМ_1_13.11.2023.xlsx",
+    "type": "file",
+    "name": "Модуль 10 Пример ЛС_РИМ_1_13.11.2023.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 39506,
+    "resource_id": "1917309068:27b56409698dd80245931096b13d554da6d9d66e9ebe608103f007139caea7c4"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 10 Пример ЛС_РИМ_2_13.11.2023.xlsx",
+    "type": "file",
+    "name": "Модуль 10 Пример ЛС_РИМ_2_13.11.2023.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 90132,
+    "resource_id": "1917309068:b7840def423627c2a3084a787aa1e858fb5fc3b36f5ca44d6aabde5519abc86c"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 10 Пример ЛС_РИМ_3_(вспомогательные ненормируемые материальные ресурсы)_03.11.2023.xlsx",
+    "type": "file",
+    "name": "Модуль 10 Пример ЛС_РИМ_3_(вспомогательные ненормируемые материальные ресурсы)_03.11.2023.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 38603,
+    "resource_id": "1917309068:f583dabd244e1b6485009989db890eb69695d3d7a964d9d877fc4a516e4c82cd"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 10 Пример расчета норматива на СК при РИМ_17.08.2023.xlsx",
+    "type": "file",
+    "name": "Модуль 10 Пример расчета норматива на СК при РИМ_17.08.2023.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 31027,
+    "resource_id": "1917309068:9475cd4b43d2a534c2b6c1e6409b31371cfd2dc427a0afc6156251f5c9563d8c"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 10 Пример расчета разницы стоимости электроэнергии_421пр_РИМ_16.08.2023.xlsx",
+    "type": "file",
+    "name": "Модуль 10 Пример расчета разницы стоимости электроэнергии_421пр_РИМ_16.08.2023.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 13188,
+    "resource_id": "1917309068:1dbbe7475b15d3714d3b3d8a4a747abbbb1a0293ad54917c453fb4830f6a7c17"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 10.docx",
+    "type": "file",
+    "name": "Модуль 10.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 5397117,
+    "resource_id": "1917309068:140be8d99f26317f3c7657bb9a136a4ec08c0c606dedf780e7c7172f7a98cf50"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 2.docx",
+    "type": "file",
+    "name": "Модуль 2.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 2192484,
+    "resource_id": "1917309068:81b8fdfae8012948a72037b534075968f11ca20c66d7cdccccfd4f21c37bac40"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 3.docx",
+    "type": "file",
+    "name": "Модуль 3.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1196683,
+    "resource_id": "1917309068:52bffbecd516059ffcb0391d9e89033a6b96d3942604c842753272ac8dd30764"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 4.docx",
+    "type": "file",
+    "name": "Модуль 4.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 3800305,
+    "resource_id": "1917309068:8a8f2260eca464f4a84e5d46e1a06a4422a0e7a2888cc66e39fa22445002ca18"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 5. Описание MarketAnalysis-1_02.pdf",
+    "type": "file",
+    "name": "Модуль 5. Описание MarketAnalysis-1_02.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 703820,
+    "resource_id": "1917309068:876f0be39ef8dbad0046910a96225fbca3519cf016cab1a5389c25f69957874e"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 5. Приложенеи 6.pdf",
+    "type": "file",
+    "name": "Модуль 5. Приложенеи 6.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 181960,
+    "resource_id": "1917309068:b47e6b83e1d0fc57c0a10eb40ea2a89b660c945db51b4411c743c9a1dc84fc0a"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 5. Приложение 1.xlsx",
+    "type": "file",
+    "name": "Модуль 5. Приложение 1.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 16858,
+    "resource_id": "1917309068:770f87173533e7627240401022947de229ca3da38c7ccd1870f80baacc69bf6d"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 5. Приложение 3.docx",
+    "type": "file",
+    "name": "Модуль 5. Приложение 3.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 17227,
+    "resource_id": "1917309068:e787059decf760dc10c91e5991364645edf1be9202aa593097707d369b3c9a62"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 5. Приложение 4.pdf",
+    "type": "file",
+    "name": "Модуль 5. Приложение 4.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 299415,
+    "resource_id": "1917309068:975d7f96e9819459e4c6818f39e110c4480afa068680719f920e3b6bc54a23b1"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 5. Приложение 5.pdf",
+    "type": "file",
+    "name": "Модуль 5. Приложение 5.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 130535,
+    "resource_id": "1917309068:6b2b38d7a9ebac891d9123741f07622e41d665a9f1e955a18b4ee282544c8a71"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 5. Приложение 6.pdf",
+    "type": "file",
+    "name": "Модуль 5. Приложение 6.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 347777,
+    "resource_id": "1917309068:1f050195b611a533ee578524f86d75e407fac5cbdd63b5be42d90cce9ecdcd58"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 5.docx",
+    "type": "file",
+    "name": "Модуль 5.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 2877153,
+    "resource_id": "1917309068:935c55e58b3217c52764d618ef3a1f2dbea1f6c623eda05bdda91616e80f8cca"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Модуль 7.docx",
+    "type": "file",
+    "name": "Модуль 7.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 2696189,
+    "resource_id": "1917309068:f967c50b9cbf68ee51710fed61a34a947ca662df045b1cc7fe668f2e06d3c164"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/ПНР.docx",
+    "type": "file",
+    "name": "ПНР.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 245540,
+    "resource_id": "1917309068:3459e3baec5ecd7b48d5356db2afee645d0261790d9a738db65bada38912baef"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Приказ Минстроя РФ от 11.12.2020 N 774ПР Об утверждении Методики по разработке и применению.rtf",
+    "type": "file",
+    "name": "Приказ Минстроя РФ от 11.12.2020 N 774ПР Об утверждении Методики по разработке и применению.rtf",
+    "public_url": null,
+    "mime_type": "text/rtf",
+    "size": 319612,
+    "resource_id": "1917309068:f34e829d63170b5baf0be29e7f5c706b2fb4c2e1b4827bc7b5ec5d0144043b2f"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Приказ Минстроя РФ от 21.12.2020 N 812ПР Об утверждении Методики по разработке и применению.rtf",
+    "type": "file",
+    "name": "Приказ Минстроя РФ от 21.12.2020 N 812ПР Об утверждении Методики по разработке и применению.rtf",
+    "public_url": null,
+    "mime_type": "text/rtf",
+    "size": 532644,
+    "resource_id": "1917309068:8601f8b53ebfec58efc630080c5a85e0b220f405a9e79185eef76879d8d1a43a"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Приказ Минстроя России от 04.08.2020 N 421_пр (ред. от 30.01.pdf",
+    "type": "file",
+    "name": "Приказ Минстроя России от 04.08.2020 N 421_пр (ред. от 30.01.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 2072762,
+    "resource_id": "1917309068:d0a284406121012c92c7e755900bbdaeab9edea0ae625ef72e3382a664756faa"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Шаблон_ЛС_РИМ_02_07_26.xlsx",
+    "type": "file",
+    "name": "Шаблон_ЛС_РИМ_02_07_26.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 21447,
+    "resource_id": "1917309068:c01cbe7a039222dcabf9328030903da173a93ea8a91a5dea100ee201f38b1fb7"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/03_Локальный сметный расчёт/Шаблон_ТСН Смета.xls",
+    "type": "file",
+    "name": "Шаблон_ТСН Смета.xls",
+    "public_url": null,
+    "mime_type": "application/vnd.ms-excel",
+    "size": 40960,
+    "resource_id": "1917309068:dc969555c9373ab0e76a005d12544e3ba6e6d32ce92bd7763897f3acadc3ce10"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/04_Конъюнктурный анализ цен/1_Лекция_12.pdf",
+    "type": "file",
+    "name": "1_Лекция_12.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 3567974,
+    "resource_id": "1917309068:6675210eda138bb7d5746574d6f6c672c193e68f896ae0b4f6f619e294e8097c"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/04_Конъюнктурный анализ цен/1_Лекция_9.pdf",
+    "type": "file",
+    "name": "1_Лекция_9.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 4704641,
+    "resource_id": "1917309068:02b086b2c40187268971fb9290e87a149d67e67db37f5038752c8780f98bd3f4"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/04_Конъюнктурный анализ цен/KA_заполненный.xls",
+    "type": "file",
+    "name": "KA_заполненный.xls",
+    "public_url": null,
+    "mime_type": "application/vnd.ms-excel",
+    "size": 44032,
+    "resource_id": "1917309068:faa0fa1bbfb57d33aab7de3cf39ff13ced17996c888d480d64151d79e46a5794"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/04_Конъюнктурный анализ цен/Конъюнктурный анализ по 30пр ШАБЛОН.xlsx",
+    "type": "file",
+    "name": "Конъюнктурный анализ по 30пр ШАБЛОН.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 15670,
+    "resource_id": "1917309068:922c88f9eef9ce2b163f2bd579124610e3e54c0e1e8a8edcfed482cc0a64e52b"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/04_Конъюнктурный анализ цен/Модуль 17.docx",
+    "type": "file",
+    "name": "Модуль 17.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 3772538,
+    "resource_id": "1917309068:21f163432f6561df8e0b3ba27829aee5f597f0fb7ba69894bfdbffdf827df981"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/04_Конъюнктурный анализ цен/Приложение 1 к сводной таблице результатов конъюнктурного анализа.docx",
+    "type": "file",
+    "name": "Приложение 1 к сводной таблице результатов конъюнктурного анализа.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 3683204,
+    "resource_id": "1917309068:9aa4eded5cfe69b30c3e0db04f645878696551038003ba572d3fb8542f7bbb13"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/05_Объектный сметный расчёт/1_Лекция_13.pdf",
+    "type": "file",
+    "name": "1_Лекция_13.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 4456071,
+    "resource_id": "1917309068:7475f8cfb33b2c925fca2ee366a482ed64f986d8baff042bffdc64928b6bcead"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/05_Объектный сметный расчёт/Модуль 6.docx",
+    "type": "file",
+    "name": "Модуль 6.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 396865,
+    "resource_id": "1917309068:bf94ae1640f861c90d973ac33c7d4836bebc7167c2a5800d9bf4de74b79e0a88"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/05_Объектный сметный расчёт/Пример Формы ОС_421пр.xlsx",
+    "type": "file",
+    "name": "Пример Формы ОС_421пр.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 17871,
+    "resource_id": "1917309068:62aa34e356b4cd3b95ca1ab19f713c7712b246fcd77fec5016b479262f371a53"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/06_Сводный сметный расчёт/1_Лекция_13.pdf",
+    "type": "file",
+    "name": "1_Лекция_13.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 4456071,
+    "resource_id": "1917309068:023773254b8b0ebac84e7cb101f59f4e7c580eac516d0d7e23c73f13b6dd8117"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/06_Сводный сметный расчёт/Модуль 6.docx",
+    "type": "file",
+    "name": "Модуль 6.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 396865,
+    "resource_id": "1917309068:afec20060d9e20075449a10e9475a217918bfa0121cdd18092e47a27f864c6a4"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/06_Сводный сметный расчёт/Пример Формы ССР_421пр.xlsx",
+    "type": "file",
+    "name": "Пример Формы ССР_421пр.xlsx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "size": 15906,
+    "resource_id": "1917309068:4b2cc5c627701e89a41db66211665e3c73d8a8604efa3e3d5bbc1ffb4ba707eb"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/01_Сбор и анализ исходных данных/Модуль 16.docx",
+    "type": "file",
+    "name": "Модуль 16.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 1034038,
+    "resource_id": "1917309068:4dc642c9ea7556ab50b854d3f2a68e39d2cd8444a871d597b18ed57ef435bedd"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/03_Локальная смета/Модуль 15.docx",
+    "type": "file",
+    "name": "Модуль 15.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 3210758,
+    "resource_id": "1917309068:301408d536c1f2cdb84febce29c94d35b9613cbe6f9fb5dbbda5293022457598"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/02_Стадия Р/04_Конъюнктурный анализ цен/Модуль 17.docx",
+    "type": "file",
+    "name": "Модуль 17.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 3772538,
+    "resource_id": "1917309068:27add239e9a1c46d0735f80a6f80dc5d457dda92f9576c019ab89b27d30cd561"
+  },
+  {
+    "path": "/02_Регионы/05_Эксплуатация, ремонт и реконструкция/01_Капитальный ремонт/04_Локальная смета/Модуль 14.docx",
+    "type": "file",
+    "name": "Модуль 14.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 3417479,
+    "resource_id": "1917309068:f392f75bbc438dc1604102f4b933b2e04c609c10d5bd621cae460f180c06b9b5"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Мини-тренажер/07.05.2026-001-ПР-ГЧ.pdf",
+    "type": "file",
+    "name": "07.05.2026-001-ПР-ГЧ.pdf",
+    "public_url": null,
+    "mime_type": "application/pdf",
+    "size": 1189771,
+    "resource_id": "1917309068:04835fc3e7bea201d201d23129e98a4ef69453a181abd16c3befe24baaba5686"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Мини-тренажер/Кладочный план чердак _1.png",
+    "type": "file",
+    "name": "Кладочный план чердак _1.png",
+    "public_url": null,
+    "mime_type": "image/png",
+    "size": 160305,
+    "resource_id": "1917309068:d986f31710fb22d095bc29e9aabf41020ca90b887c34afad0769f21509f001b2"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Мини-тренажер/Пример оформления ВОР.xls",
+    "type": "file",
+    "name": "Пример оформления ВОР.xls",
+    "public_url": null,
+    "mime_type": "application/vnd.ms-excel",
+    "size": 40448,
+    "resource_id": "1917309068:bdc141bfbdc50957397d782c08d4dc7fc153c2a8a0bf5129ff9e8d763aeeefe2"
+  },
+  {
+    "path": "/02_Регионы/03_Проектная стадия/01_Стадия П/02_ВОР/Мини-тренажер/Шаблон оформления ПР№1.docx",
+    "type": "file",
+    "name": "Шаблон оформления ПР№1.docx",
+    "public_url": null,
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "size": 14953,
+    "resource_id": "1917309068:17a529041ba524d3f129e5789217af1433ba8a5f0fbbfba474b7a504718fe45a"
+  }
+]

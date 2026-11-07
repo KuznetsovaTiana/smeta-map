@@ -1,5 +1,7 @@
 import { regulations } from './regulations'
 import type { ItemResources, Resource } from '../types/process'
+import { referenceMaterials as moscowReferences } from './regions/moscow/referenceMaterials.ts'
+import { referenceMaterials as regionalReferences } from './regions/regions/referenceMaterials.ts'
 
 function placeholders(itemId: string, label: string, region: 'moscow' | 'regions'): Resource[] {
   const territory = region === 'moscow' ? 'Москвы' : 'регионов'
@@ -17,6 +19,8 @@ export const resources: ItemResources = Object.fromEntries(
     regions: placeholders(id, label, 'regions'),
   }]),
 )
+
+resources['regulatory-reference'] = { moscow: moscowReferences, regions: regionalReferences }
 
 
 // Ссылки нормативных карточек используют тот же каталог ресурсов.

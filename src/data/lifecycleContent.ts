@@ -11,6 +11,8 @@ import { materials as moscowMaterials } from './regions/moscow/materials.ts'
 import { nodeContent as regionalNodeContent } from './regions/regions/nodeContent.ts'
 import { documents as regionalDocuments } from './regions/regions/documents.ts'
 import { materials as regionalMaterials } from './regions/regions/materials.ts'
+import { supplementalDocuments as moscowSupplementalDocuments } from './regions/moscow/supplementalDocuments.ts'
+import { supplementalDocuments as regionalSupplementalDocuments } from './regions/regions/supplementalDocuments.ts'
 
 /** Снимок для проверки данных. Пока не подключается к UI или старому репозиторию. */
 export const lifecycleContent: ContentSnapshot = {
@@ -21,8 +23,8 @@ export const lifecycleContent: ContentSnapshot = {
   materialTypes,
   documentTypes,
   catalogs: [
-    { regionId: 'moscow', nodeContent: moscowNodeContent, documents: moscowDocuments, materials: moscowMaterials },
-    { regionId: 'regions', nodeContent: regionalNodeContent, documents: regionalDocuments, materials: regionalMaterials },
+    { regionId: 'moscow', nodeContent: moscowNodeContent, documents: [...moscowDocuments, ...moscowSupplementalDocuments], materials: moscowMaterials },
+    { regionId: 'regions', nodeContent: regionalNodeContent, documents: [...regionalDocuments, ...regionalSupplementalDocuments], materials: regionalMaterials },
   ],
 }
 

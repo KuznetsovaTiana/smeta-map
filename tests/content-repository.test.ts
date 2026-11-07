@@ -60,8 +60,8 @@ test('документы на уровне блока, получение поз
 test('оба региона изолированы; чужие ID дают not-found без fallback', async () => {
   const moscow = data(await contentRepository.getRegionalCatalog('moscow'))
   const regions = data(await contentRepository.getRegionalCatalog('regions'))
-  assert.equal(moscow.documents.length, 33)
-  assert.equal(regions.documents.length, 33)
+  assert.equal(moscow.documents.length, 36)
+  assert.equal(regions.documents.length, 45)
   assert.ok(moscow.documents.every(document => document.regionId === 'moscow'))
   assert.ok(regions.documents.every(document => document.regionId === 'regions'))
   assert.equal((await contentRepository.getDocument(moscow.documents[0].id, 'regions')).status, 'not-found')
@@ -164,6 +164,7 @@ test('AbortSignal: отмена до старта и во время завис�
 test('пустой каталог выбранного региона не подменяется заполненным соседним', async () => {
   const snapshot = structuredClone(lifecycleContent)
   snapshot.catalogs[0].documents = []
+  snapshot.catalogs[0].materials = []
   const repository = new LocalContentRepository(snapshot)
   const owner = { kind: 'block' as const, id: 'work-accounting' }
   assert.deepEqual(data(await repository.getDocuments(owner, 'moscow')), [])

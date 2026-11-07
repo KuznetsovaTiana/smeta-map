@@ -8,6 +8,9 @@ import { validateContentSnapshot } from '../src/utils/contentValidation.ts'
 
 const specification = readFileSync(new URL('../ТЗ_сметное_дело.md', import.meta.url), 'utf8')
 const normalize = (text: string) => text.replace(/\s+/g, ' ').replace(/---/g, '—').trim().replace(/\.$/, '')
+// Mandatory positions from the original specification remain independent of
+// additional, actually discovered teaching materials.
+const coreDocument = (document: { id: string }) => !document.id.endsWith('-materials-document')
 
 /** Ожидаемые названия и порядок читаются из первичного ТЗ, а не копируются из данных. */
 function section(heading: string): string {
@@ -99,14 +102,14 @@ test('П и Р: 8 самостоятельных операций и по 6 не
   assert.equal(p[2].title, 'Локальный сметный расчёт')
   assert.equal(r[2].title, 'Локальная смета')
   for (const catalog of lifecycleContent.catalogs) {
-    const docsP = catalog.documents.filter(document => p.some(operation => operation.id === document.owner.id))
-    const docsR = catalog.documents.filter(document => r.some(operation => operation.id === document.owner.id))
+    const docsP = catalog.documents.filter(document => coreDocument(document) && p.some(operation => operation.id === document.owner.id))
+    const docsR = catalog.documents.filter(document => coreDocument(document) && r.some(operation => operation.id === document.owner.id))
     assert.equal(docsP.length, 6); assert.equal(docsR.length, 6)
     assert.ok(docsP.every(document => !docsR.some(other => other.id === document.id || other === document)))
   }
 })
 
-test('33 позиции на регион: только именованные документы ТЗ, без придуманных перечней', () => {
+test('33 обязательные позиции ТЗ сохранены в каждом регионе', () => {
   // Индексы документных элементов внутри первичных списков ТЗ. Остальные элементы — действия.
   const documentIndices: Record<string, number[]> = {
     'design-p': [1, 2, 4, 5, 6, 7],
@@ -117,13 +120,14 @@ test('33 позиции на регион: только именованные �
     demolition: [2, 3, 5, 6, 7],
   }
   for (const catalog of lifecycleContent.catalogs) {
+    const coreDocuments = catalog.documents.filter(coreDocument)
     const expectedOwners = new Set<string>()
-    assert.equal(catalog.documents.length, 33)
+    assert.equal(coreDocuments.length, 33)
     for (const [kind, id, heading] of operationSections) {
       const titles = list(heading)
       const operations = lifecycleContent.operations.filter(operation => operation.parent.kind === kind && operation.parent.id === id)
       for (const [index, operation] of operations.entries()) {
-        const docs = catalog.documents.filter(document => document.owner.kind === 'operation' && document.owner.id === operation.id)
+        const docs = coreDocuments.filter(document => document.owner.kind === 'operation' && document.owner.id === operation.id)
         if (documentIndices[id].includes(index)) {
           expectedOwners.add(operation.id)
           assert.equal(docs.length, 1)
@@ -134,8 +138,8 @@ test('33 позиции на регион: только именованные �
     const accounting = catalog.documents.filter(document => document.owner.kind === 'block' && document.owner.id === 'work-accounting')
     assert.deepEqual(accounting.map(document => document.title), list('#### Блок 4.3.'))
     assert.deepEqual(accounting.map(document => document.order), [1, 2, 3, 4, 5])
-    assert.equal(catalog.documents.filter(document => document.owner.kind === 'process').length, 0)
-    assert.ok(catalog.documents.every(document => expectedOwners.has(document.owner.id) || document.owner.id === 'work-accounting'))
+    assert.equal(coreDocuments.filter(document => document.owner.kind === 'process').length, 0)
+    assert.ok(coreDocuments.every(document => expectedOwners.has(document.owner.id) || document.owner.id === 'work-accounting'))
     assert.ok(catalog.documents.every(document => document.regionId === catalog.regionId))
   }
 })
@@ -155,30 +159,33 @@ test('для каждого из 60 узлов ровно одна запись 
       assert.ok(result.ok, JSON.stringify(result))
       if (!result.ok) throw new Error('Недопустимый снимок')
       totals[result.status]++
-      assert.equal(result.counts.totalMaterials, 0)
-      assert.equal(result.counts.availableMaterials, 0)
       const directDocs = catalog.documents.filter(document => document.owner.kind === content.owner.kind && document.owner.id === content.owner.id)
+      const directIds = new Set(directDocs.map(document => document.id))
+      const directMaterials = catalog.materials.filter(material => directIds.has(material.documentId))
+      assert.equal(result.counts.totalMaterials, directMaterials.length)
+      assert.equal(result.counts.availableMaterials, directMaterials.length)
       assert.equal(result.counts.documents, directDocs.length)
       if (directDocs.length) {
         assert.equal(content.definition, 'defined')
-        assert.equal(result.status, 'unavailable')
+        assert.equal(result.status, directMaterials.length ? 'complete' : 'unavailable')
       }
     }
-    assert.deepEqual(totals, { 'not-defined': 20, 'no-direct-documents': 11, unavailable: 29, partial: 0, complete: 0 })
+    assert.equal(Object.values(totals).reduce((sum, count) => sum + count, 0), 60)
+    assert.equal(totals.partial, 0)
   }
 })
 
-test('неуточнённые направления без вымышленных операций, документов и материалов', () => {
+test('ранее неуточнённые направления наполняются только найденными материалами', () => {
   const unknown = ['ncs', 'analog-objects', 'engineering-surveys', 'design-works', 'as-built-estimate', 'estimate-expertise', 'nmck', 'technical-maintenance']
   for (const id of unknown) {
     assert.equal(lifecycleContent.operations.filter(operation => operation.parent.id === id).length, 0)
     for (const catalog of lifecycleContent.catalogs) {
       const result = getContentAvailability(lifecycleContent, { kind: 'block', id }, catalog.regionId)
-      assert.ok(result.ok && result.status === 'not-defined')
-      assert.equal(catalog.documents.filter(document => document.owner.id === id).length, 0)
+      const docs = catalog.documents.filter(document => document.owner.id === id)
+      assert.ok(result.ok && result.status === (docs.length ? 'complete' : 'not-defined'))
+      assert.ok(docs.every(document => !coreDocument(document) && catalog.materials.some(material => material.documentId === document.id)))
     }
   }
-  for (const catalog of lifecycleContent.catalogs) assert.deepEqual(catalog.materials, [])
   const repairBlocks = lifecycleContent.blocks.filter(block => block.processId === 'operation-and-repair')
   assert.deepEqual(repairBlocks.map(block => block.id), ['capital-repair', 'current-repair', 'technical-maintenance'])
 })
@@ -193,12 +200,13 @@ test('региональные каталоги независимы, докум
   changed.catalogs[0].documents[0].title = 'Изменено только в тестовой копии'
   assert.notEqual(changed.catalogs[0].documents[0].title, changed.catalogs[1].documents[0].title)
   changed.catalogs[0].documents = []
+  changed.catalogs[0].materials = []
   const result = getContentAvailability(changed, { kind: 'operation', id: 'design-p-vor' }, 'moscow')
   assert.ok(result.ok && result.status === 'no-direct-documents')
-  assert.equal(changed.catalogs[1].documents.length, 33)
+  assert.equal(changed.catalogs[1].documents.filter(coreDocument).length, 33)
   assert.equal(getRegionalMaterialHref(lifecycleContent, 'missing', 'moscow'), null)
   assert.equal(getRegionalMaterialHref(lifecycleContent, 'missing', 'regions'), null)
-  assert.deepEqual(moscow.documents.map(({ owner, order, title }) => ({ owner, order, title })), regional.documents.map(({ owner, order, title }) => ({ owner, order, title })))
+  assert.deepEqual(moscow.documents.filter(coreDocument).map(({ owner, order, title }) => ({ owner, order, title })), regional.documents.filter(coreDocument).map(({ owner, order, title }) => ({ owner, order, title })))
 })
 
 test('расширение процесса 05 только данными; обязательные региональные записи проверяются', () => {

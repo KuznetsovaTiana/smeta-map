@@ -72,7 +72,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "block",
       "id": "engineering-surveys"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "moscow",
@@ -80,7 +80,7 @@ export const nodeContent: RegionalNodeContent[] = [
       "kind": "block",
       "id": "design-works"
     },
-    "definition": "not-defined"
+    "definition": "defined"
   },
   {
     "regionId": "moscow",
@@ -483,4 +483,3 @@ export const nodeContent: RegionalNodeContent[] = [
     "definition": "defined"
   }
 ]
-
