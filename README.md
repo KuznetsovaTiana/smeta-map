@@ -1,5 +1,14 @@
 # React + TypeScript + Vite
 
+## Сборка и размещение
+
+- `npm run build` — сборка для корня домена, включая Yandex Object Storage: `base: '/'`. Загрузите содержимое `dist/` в корень бакета, включая `assets/` и `documents/`.
+- `npm run build:github-pages` — отдельная сборка с `base: '/smeta-map/'` в `dist-github-pages/`. Её использует workflow GitHub Pages.
+
+Основной адрес: https://smetnoe-delo.website.yandexcloud.net/.
+Приложение использует `HashRouter` без `basename`; маршруты после `#` не требуют настройки перенаправлений на хостинге.
+PDF инструкции использует `import.meta.env.BASE_URL` и получает правильный путь для каждой сборки.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:

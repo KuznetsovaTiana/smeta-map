@@ -36,7 +36,7 @@ test('100 привязок ведут на проверенный просмот
       assert.equal(url.origin, 'https://disk.yandex.ru')
       assert.equal(url.search, '')
       assert.equal(url.hash, '')
-      const path = decodeURIComponent(url.pathname.replace('/d/OAUtZcIwS94DDg', ''))
+      const path = decodeURIComponent(url.pathname.replace('/d/LiLSJN83d9vs6Q', ''))
       assert.ok(path.startsWith(catalog.regionId === 'moscow' ? '/01_Москва/' : '/02_Регионы/'))
       const file = inventory.find(item => item.path === path)
       assert.ok(file && file.type === 'file')

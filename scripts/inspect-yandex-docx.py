@@ -15,7 +15,7 @@ def fetch(url):
 
 
 def inspect(item):
-    query = urllib.parse.urlencode({'public_key': 'https://disk.yandex.ru/d/OAUtZcIwS94DDg', 'path': item['path']})
+    query = urllib.parse.urlencode({'public_key': 'https://disk.yandex.ru/d/LiLSJN83d9vs6Q', 'path': item['path']})
     try:
         address = json.loads(fetch('https://cloud-api.yandex.net/v1/disk/public/resources?' + query))['file']
         with zipfile.ZipFile(io.BytesIO(fetch(address))) as archive:

@@ -7,8 +7,18 @@ import pathlib
 import urllib.parse
 
 BASE = pathlib.Path('src/data/regions')
-ROOT = 'https://disk.yandex.ru/d/OAUtZcIwS94DDg'
+ROOT = 'https://disk.yandex.ru/d/LiLSJN83d9vs6Q'
 items = json.loads(pathlib.Path('docs/yandex-disk-inventory.json').read_text(encoding='utf-8-sig'))
+checks = {row['path']: row for row in json.loads(pathlib.Path('docs/yandex-link-checks.json').read_text(encoding='utf-8-sig'))}
+
+
+def verified_url(item):
+    url = ROOT + urllib.parse.quote(item['path'], safe='/')
+    check = checks.get(item['path'])
+    resource_id = item['resource_id'].split(':', 1)[1]
+    if not check or not check['previewVerified'] or check['url'] != url or check['resourceId'] != resource_id or check['previewResourceId'] != resource_id:
+        raise ValueError(f"Unverified file preview: {item['path']}")
+    return url
 
 # Each rule uses the territory AND complete process/block/operation folder chain.
 # No fuzzy filename matching, no fallback between territories, no folder links.
@@ -70,7 +80,7 @@ for region, folder in [('moscow', '01_Москва'), ('regions', '02_Регио
         if parts[1] == 'Нормативно-техническая документация':
             references.append(dict(id=f"{region}-disk-{item['resource_id'].split(':')[1]}",
                                    title=item['name'], type='methodology' if item['name'].endswith('.docx') else 'instruction',
-                                   url=ROOT + urllib.parse.quote(item['path'], safe='/'), source='external'))
+                                   url=verified_url(item), source='external'))
             continue
         match = destination(parts)
         if not match:
@@ -85,7 +95,7 @@ for region, folder in [('moscow', '01_Москва'), ('regions', '02_Регио
         material_type = 'template' if 'шаблон' in name.lower() else 'example' if 'пример' in name.lower() else 'regulation' if name.startswith('Приказ ') else 'reference'
         materials.append(dict(id=f"{region}-disk-{item['resource_id'].split(':')[1]}", documentId=document_id,
                               order=orders[document_id], title=name, typeId=material_type,
-                              url=ROOT + urllib.parse.quote(item['path'], safe='/'), format=name.rsplit('.', 1)[-1].upper(), linkCheck='working'))
+                              url=verified_url(item), format=name.rsplit('.', 1)[-1].upper(), linkCheck='working'))
     def write(name, type_name, export, rows):
         (BASE / region / name).write_text(f"import type {{ {type_name} }} from '../../../types/document.ts'\n\n"
             + '/** Подготовлено по публичному каталогу; ID и ссылки на конкретные файлы проверены 07.11.2026. */\n'

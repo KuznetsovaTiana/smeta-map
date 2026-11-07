@@ -15,7 +15,7 @@ while queue:
     path = queue.popleft()
     offset = 0
     while True:
-        query = urllib.parse.urlencode(dict(public_key='https://disk.yandex.ru/d/OAUtZcIwS94DDg', path=path, limit=100, offset=offset))
+        query = urllib.parse.urlencode(dict(public_key='https://disk.yandex.ru/d/LiLSJN83d9vs6Q', path=path, limit=100, offset=offset))
         response = subprocess.check_output([
             'curl.exe' if sys.platform == 'win32' else 'curl', '-fsSL', '--max-time', '30',
             '--retry', '2', 'https://cloud-api.yandex.net/v1/disk/public/resources?' + query,

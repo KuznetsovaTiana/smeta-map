@@ -11,7 +11,7 @@ import subprocess
 import sys
 import urllib.parse
 
-ROOT = 'https://disk.yandex.ru/d/OAUtZcIwS94DDg'
+ROOT = 'https://disk.yandex.ru/d/LiLSJN83d9vs6Q'
 
 
 def preview_url(path):
